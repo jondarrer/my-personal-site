@@ -1,6 +1,8 @@
 # jondarrer.com
 
-The website for [jondarrer.com](https://jondarrer.com). Deployed using [Travis CI](https://travis-ci.com) and hosted by [Firebase](https://firebase.google.com).
+The website for [jondarrer.com](https://jondarrer.com). Deployed using
+[Travis CI](https://travis-ci.com) and hosted by
+[Firebase](https://firebase.google.com).
 
 ## Development
 
@@ -18,10 +20,6 @@ npm i
 ```
 
 ### Run locally
-
-The form within the application relies on the `FORM_ENDPOINT` environment
-variable to link to
-[99inbound](https://docs.99inbound.com/form-endpoints/installation/).
 
 ```bash
 npm start
@@ -53,8 +51,6 @@ npm run build
 ```
 
 ### Deploy
-
-Deploy with:
 
 ```bash
 git push
