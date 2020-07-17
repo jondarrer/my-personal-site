@@ -1,0 +1,31 @@
+{
+  "name": "my-personal-site",
+  "version": "1.0.0",
+  "description": "Project for personal website jondarrer.com",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Nothing to build'",
+    "prepare": "npm run build",
+    "start": "echo 'Nothing to start'",
+    "prestart:fb": "npm run build",
+    "start:fb": "firebase serve --only hosting",
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jondarrer/my-personal-site.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Jonathan Darrer <jonny@jondarrer.me.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jondarrer/my-personal-site/issues"
+  },
+  "homepage": "https://github.com/jondarrer/my-personal-site#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {}
+}

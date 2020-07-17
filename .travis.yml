@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 12
+os:
+- linux
+dist: xenial
+deploy:
+  edge: true
+  provider: firebase
+env:
+  global:
+    secure: itrkntWNe1xxFfjFcvhXagP2ih8xEkE6+ABcpRzmJcxktUd2bFI0Swn3qKa/7g1vkICECvHB+/Yvd/B1mXOmSPvCVpANk19PHmFvm9YLb8X4dzqIj89rbjcxCdgaPlpv9QcLjTRDwFm0BN83kfJAZC4H0i64ai8ZP/b7hr/VBsb3NnUOcr1Eutni7yuIKIIPs1VmXGuZpmeTkHhWB/bfPm+844leoR9jYSehqBL8bi/nHENL9GvbDtKjdtNFrlUutcIeo8AX+6WWRuKWEewlrZ2jAmpmgkuot77eJ5OQQHUJgS9pK5nPsCcsvjuBZ4SI5wvBbfWysLhSezZD05pV/akN11laR/J6Cf3WAFjXZvbtdJPKHPcVHMvLv6KRc/iR0tRe1Q4ZMcG/lfcX1129G/egyib3iQI4Rr/p9k1jzVNjzUrSFaw4gG+wnGOgcPJJTyi2+h+6MKlJYBFt2h1ugZEQoUaO/997jvqkJeoUxhzyigXBPHQemfFz0NLjLOy9q7yEm1fo1S6pMCuKj6q57AVQyLAA+vThBaL/WMFr7dCPh/HNS0frlRtL5UQBnaDimNEXIugV3huNymJ3ABSUn6TTw0JYbs7MxmmIy9tN3owcI5haLCxVOXe+TVXgcRc5iHkb2OYukIVeNKEP2064TvLAJkPZsmY95F2mCT+4emQ=
