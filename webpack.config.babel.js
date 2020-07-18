@@ -26,10 +26,15 @@ const paths = [
     priority: '0.8',
     changefreq: 'daily',
   },
+  {
+    path: '/ro',
+    lastmod,
+    priority: '0.8',
+    changefreq: 'daily',
+  },
 ];
 
-// const routes = paths.map((path) => path.path);
-const routes = ['/'];
+const routes = paths.map((path) => path.path);
 
 module.exports = {
   entry: resolve(__dirname, 'src'),
