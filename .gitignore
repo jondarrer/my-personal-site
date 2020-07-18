@@ -34,6 +34,9 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+# MacOS
+.DS_Store
+
 # Bower dependency directory (https://bower.io/)
 bower_components
 
@@ -42,6 +45,12 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+
+# Output
+dist
+
+# Output
+directories
 
 # Dependency directories
 node_modules/
