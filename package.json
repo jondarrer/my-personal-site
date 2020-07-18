@@ -7,7 +7,7 @@
     "analyzer": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
     "build": "webpack",
     "prepare": "npm run build",
-    "start": "echo 'Nothing to start'",
+    "start": "webpack-dev-server --open",
     "prestart:fb": "npm run build",
     "start:fb": "firebase serve --only hosting",
     "test": "jest --passWithNoTests"
@@ -30,6 +30,7 @@
     "@babel/core": "^7.10.5",
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
     "@types/jest": "^26.0.4",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
