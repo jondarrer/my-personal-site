@@ -1,7 +1,7 @@
-import i18n from 'i18next/dist/cjs/i18next';
+import i18next from 'i18next/dist/cjs/i18next';
 import { initReactI18next } from 'react-i18next';
 
-i18n
+const i18n = i18next
   // pass the i18n instance to react-i18next.
   .use(initReactI18next)
   // init i18next
@@ -19,10 +19,18 @@ i18n
         'home-page': {
           hello: 'Hello!',
         },
+        'language-switcher': {
+          en: 'English',
+          ro: 'Romanian',
+        },
       },
       ro: {
         'home-page': {
           hello: 'Buna!',
+        },
+        'language-switcher': {
+          en: 'Engleza',
+          ro: 'Romana',
         },
       },
     },
