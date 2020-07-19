@@ -3,5 +3,7 @@ module.exports = {
   plugins: [
     'inline-react-svg',
     '@babel/plugin-transform-react-jsx',
+    '@babel/plugin-transform-regenerator',
+    '@babel/plugin-transform-runtime',
   ],
 };
