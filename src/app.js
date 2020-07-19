@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theme-ui';
 
 import { HomePage } from './routes';
-
+import { Layout } from './components';
 import { LanguageContext } from './contexts';
 import { theme, i18n as _i18n } from './utils';
 
@@ -16,18 +16,24 @@ const App = () => (
         <LanguageContext.Provider
           value={{ currentLanguage: 'en', availableLanguages }}
         >
-          <HomePage />
+          <Layout>
+            <HomePage />
+          </Layout>
         </LanguageContext.Provider>
       </Route>
       <Route path="/ro" exact>
         <LanguageContext.Provider
           value={{ currentLanguage: 'ro', availableLanguages }}
         >
-          <HomePage />
+          <Layout>
+            <HomePage />
+          </Layout>
         </LanguageContext.Provider>
       </Route>
       <Route>
-        <h1>not-found</h1>
+        <Layout>
+          <h1>not-found</h1>
+        </Layout>
       </Route>
     </Switch>
   </ThemeProvider>
