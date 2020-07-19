@@ -23,6 +23,10 @@ const i18n = i18next
           en: 'English',
           ro: 'Romanian',
         },
+        routes: {
+          '/': '/',
+          '/ro': '/',
+        },
       },
       ro: {
         'home-page': {
@@ -31,6 +35,10 @@ const i18n = i18next
         'language-switcher': {
           en: 'Engleza',
           ro: 'Romana',
+        },
+        routes: {
+          '/': '/ro',
+          '/ro': '/ro',
         },
       },
     },

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import { Link, useLocation } from 'react-router-dom';
+import { Box, Link as ThemeUILink } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
@@ -12,6 +13,7 @@ import { useLanguage } from '../../contexts';
 const LanguageSwitcher = () => {
   const { currentLanguage, availableLanguages } = useLanguage();
   const { t } = useTranslation();
+  const location = useLocation();
 
   return (
     <Box>
@@ -19,9 +21,13 @@ const LanguageSwitcher = () => {
         return language === currentLanguage ? (
           <Box as="span" key={index} />
         ) : (
-          <Box as="span" key={index}>
+          <ThemeUILink
+            as={Link}
+            key={index}
+            to={t(`routes:${location.pathname}`, { lng: language })}
+          >
             {t(`language-switcher:${language}`, { lng: currentLanguage })}
-          </Box>
+          </ThemeUILink>
         );
       })}
     </Box>
