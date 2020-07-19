@@ -7,16 +7,22 @@ import { HomePage } from './routes';
 import { LanguageContext } from './contexts';
 import { theme, i18n as _i18n } from './utils';
 
+const availableLanguages = ['en', 'ro'];
+
 const App = () => (
   <ThemeProvider theme={theme}>
     <Switch>
       <Route path="/" exact>
-        <LanguageContext.Provider value="en">
+        <LanguageContext.Provider
+          value={{ currentLanguage: 'en', availableLanguages }}
+        >
           <HomePage />
         </LanguageContext.Provider>
       </Route>
       <Route path="/ro" exact>
-        <LanguageContext.Provider value="ro">
+        <LanguageContext.Provider
+          value={{ currentLanguage: 'ro', availableLanguages }}
+        >
           <HomePage />
         </LanguageContext.Provider>
       </Route>

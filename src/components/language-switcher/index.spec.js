@@ -16,9 +16,15 @@ describe('components/LanguageSwitcher', () => {
     // Arrange
     const currentLanguage = 'en';
     const otherLanguage = 'ro';
+
     render(
-      <LanguageContext.Provider value={currentLanguage}>
-        <LanguageSwitcher languages={[currentLanguage, otherLanguage]} />
+      <LanguageContext.Provider
+        value={{
+          currentLanguage,
+          availableLanguages: [currentLanguage, otherLanguage],
+        }}
+      >
+        <LanguageSwitcher />
       </LanguageContext.Provider>
     );
 

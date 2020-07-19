@@ -5,10 +5,12 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../contexts';
 
 const HomePage = () => {
-  const lng = useLanguage();
+  const { currentLanguage } = useLanguage();
   const { t } = useTranslation();
 
-  return <Heading as="h1">{t('home-page:hello', { lng })}</Heading>;
+  return (
+    <Heading as="h1">{t('home-page:hello', { lng: currentLanguage })}</Heading>
+  );
 };
 
 export default HomePage;

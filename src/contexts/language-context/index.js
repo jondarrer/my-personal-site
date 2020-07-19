@@ -1,13 +1,24 @@
 import React from 'react';
 
-const LanguageContext = React.createContext(/** @type {string} */ 'en');
+/**
+ * @typedef {object} LanguageContextValue
+ * @property {string} currentLanguage
+ * @property {Array<string>} availableLanguages
+ */
+
+/**
+ * @type {React.Context<LanguageContextValue>}
+ */
+const LanguageContext = React.createContext({
+  currentLanguage: 'en',
+  availableLanguages: ['en'],
+});
 
 export default LanguageContext;
 
 /**
- * Returns the current language
- * as an object.
+ * Hook with the current language and available languages.
  *
- * @returns {string} The current language
+ * @returns {LanguageContextValue}
  */
 export const useLanguage = () => React.useContext(LanguageContext);
