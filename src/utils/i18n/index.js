@@ -23,6 +23,11 @@ const i18n = i18next
           en: 'English',
           ro: 'Romanian',
         },
+        footer: {
+          'copyright-notice': '(c) 2020 Jonathan Darrer',
+          github: 'https://github.com/jondarrer',
+          email: 'jonny@jondarrer.me.uk',
+        },
         routes: {
           '/': '/',
           '/ro': '/',
@@ -35,6 +40,11 @@ const i18n = i18next
         'language-switcher': {
           en: 'Engleza',
           ro: 'Romana',
+        },
+        footer: {
+          'copyright-notice': '(c) 2020 Jonathan Darrer',
+          github: 'https://github.com/jondarrer',
+          email: 'jonny@jondarrer.me.uk',
         },
         routes: {
           '/': '/ro',
