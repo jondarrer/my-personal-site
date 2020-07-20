@@ -9,4 +9,11 @@ export default {
     background: '#fff',
     primary: '#33e',
   },
+  styles: {
+    root: {
+      // uses the theme values provided above
+      fontFamily: 'body',
+      fontWeight: 'body',
+    },
+  },
 };
