@@ -32,6 +32,10 @@ const i18n = i18next
           '/': '/',
           '/ro': '/',
         },
+        'colour-mode-switcher': {
+          light: 'Light Mode',
+          dark: 'Dark Mode',
+        },
       },
       ro: {
         'home-page': {
@@ -49,6 +53,10 @@ const i18n = i18next
         routes: {
           '/': '/ro',
           '/ro': '/ro',
+        },
+        'colour-mode-switcher': {
+          light: 'Mod lumină',
+          dark: 'Mod Întunecat',
         },
       },
     },
