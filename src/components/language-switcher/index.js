@@ -26,7 +26,7 @@ const LanguageSwitcher = () => {
             key={index}
             to={t(`routes:${location.pathname}`, { lng: language })}
           >
-            {t(`language-switcher:${language}`, { lng: currentLanguage })}
+            {t(`language-switcher:${language}`, { lng: language })}
           </ThemeUILink>
         );
       })}

@@ -51,7 +51,7 @@ describe('components/LanguageSwitcher', () => {
     expect(
       screen.queryByText(
         i18next.t(`language-switcher:${otherLanguage}`, {
-          lng: currentLanguage,
+          lng: otherLanguage,
         })
       )
     ).toBeInTheDocument();
@@ -77,7 +77,7 @@ describe('components/LanguageSwitcher', () => {
     // Act
     const otherLanguageLink = screen.queryByText(
       i18next.t(`language-switcher:${otherLanguage}`, {
-        lng: currentLanguage,
+        lng: otherLanguage,
       })
     );
     fireEvent.click(otherLanguageLink);
