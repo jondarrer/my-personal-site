@@ -24,7 +24,7 @@ describe('components/ColourModeSwitcher', () => {
   // beforeAll(() => {
   //   ThemeUI.useColorMode.mockReturnValue(mockUseColorMode);
   // });
-  it('Should show all modes', async () => {
+  it('Should show all modes, except the current one', async () => {
     // Arrange
     const currentLanguage = 'en';
     const lightMode = 'light';
@@ -52,7 +52,7 @@ describe('components/ColourModeSwitcher', () => {
           lng: currentLanguage,
         })
       )
-    ).toBeInTheDocument();
+    ).not.toBeInTheDocument();
     expect(
       screen.queryByText(
         i18next.t(`colour-mode-switcher:${darkMode}`, {

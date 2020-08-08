@@ -26,11 +26,7 @@ const ColourModeSwitcher = ({ colourModes }) => {
     <>
       {colourModes.map((colourMode, index) => {
         return colourMode === currentColorMode ? (
-          <Box as="span" key={index}>
-            {t(`colour-mode-switcher:${colourMode}`, {
-              lng: currentLanguage,
-            })}
-          </Box>
+          <Box as="span" key={index} />
         ) : (
           <ThemeUILink
             href="#!"
