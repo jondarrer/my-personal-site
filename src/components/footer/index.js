@@ -15,15 +15,18 @@ const Footer = () => {
         textAlign: 'center',
         width: '100%',
       }}
+      px={['2', '2', '3', '4']}
+      py={['1', '1', '2', '2']}
       variant="styles.footer"
     >
-      <Text sx={{ display: ['block', null, 'inline-block'] }}>
+      <Text sx={{ display: 'block' }}>
         {t('footer:copyright-notice', { lng: currentLanguage })}
       </Text>
       <Box sx={{ display: ['block', null, 'inline-block'] }}>
         <NavLink
           href={`mailto:${t('footer:email', { lng: currentLanguage })}`}
           sx={{ variant: 'links.footer' }}
+          mr="2"
         >
           {t('footer:email', { lng: currentLanguage })}
         </NavLink>

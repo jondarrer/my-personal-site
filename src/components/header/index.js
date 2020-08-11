@@ -8,7 +8,7 @@ const Header = () => (
   <Flex
     as="header"
     sx={{
-      position: ['fixed', null, 'relative'],
+      position: ['fixed', null, null, 'relative'],
       alignItems: 'center',
       alignContent: 'center',
       variant: 'styles.header',
