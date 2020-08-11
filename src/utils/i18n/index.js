@@ -16,6 +16,7 @@ const i18n = i18next
     },
     resources: {
       en: {
+        'nav-bar': { 'business-name': 'jondarrer.com' },
         'home-page': {
           hello: 'Hello!',
         },
@@ -38,6 +39,7 @@ const i18n = i18next
         },
       },
       ro: {
+        'nav-bar': { 'business-name': 'jondarrer.com' },
         'home-page': {
           hello: 'Buna!',
         },

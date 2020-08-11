@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Box, Link as ThemeUILink } from 'theme-ui';
+import { Box, NavLink } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
@@ -10,27 +10,26 @@ import { useLanguage } from '../../contexts';
  *
  * @type {React.FC}
  */
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ variant }) => {
   const { currentLanguage, availableLanguages } = useLanguage();
   const { t } = useTranslation();
   const location = useLocation();
 
   return (
-    <Box>
+    <>
       {availableLanguages.map((language, index) => {
-        return language === currentLanguage ? (
-          <Box as="span" key={index} />
-        ) : (
-          <ThemeUILink
+        return language === currentLanguage ? null : (
+          <NavLink
             as={Link}
             key={index}
             to={t(`routes:${location.pathname}`, { lng: language })}
+            variant={variant}
           >
             {t(`language-switcher:${language}`, { lng: language })}
-          </ThemeUILink>
+          </NavLink>
         );
       })}
-    </Box>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { Box, Text, jsx } from 'theme-ui';
+import { Box, NavLink, Text, jsx } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
@@ -15,17 +15,24 @@ const Footer = () => {
         textAlign: 'center',
         width: '100%',
       }}
+      variant="styles.footer"
     >
       <Text sx={{ display: ['block', null, 'inline-block'] }}>
         {t('footer:copyright-notice', { lng: currentLanguage })}
       </Text>
       <Box sx={{ display: ['block', null, 'inline-block'] }}>
-        <a href={`mailto:${t('footer:email', { lng: currentLanguage })}`}>
+        <NavLink
+          href={`mailto:${t('footer:email', { lng: currentLanguage })}`}
+          sx={{ variant: 'links.footer' }}
+        >
           {t('footer:email', { lng: currentLanguage })}
-        </a>
-        <a href={`${t('footer:github', { lng: currentLanguage })}`}>
+        </NavLink>
+        <NavLink
+          href={`${t('footer:github', { lng: currentLanguage })}`}
+          sx={{ variant: 'links.footer' }}
+        >
           {t('footer:github', { lng: currentLanguage })}
-        </a>
+        </NavLink>
       </Box>
     </Box>
   );

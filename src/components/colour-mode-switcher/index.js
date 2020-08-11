@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Link as ThemeUILink, useColorMode } from 'theme-ui';
+import { Box, NavLink, useColorMode } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
@@ -17,7 +17,7 @@ import { useLanguage } from '../../contexts';
  *
  * @type {React.FC<Props>}
  */
-const ColourModeSwitcher = ({ colourModes }) => {
+const ColourModeSwitcher = ({ colourModes, variant }) => {
   const { currentLanguage } = useLanguage();
   const { t } = useTranslation();
   const [currentColorMode, setColorMode] = useColorMode();
@@ -25,19 +25,18 @@ const ColourModeSwitcher = ({ colourModes }) => {
   return (
     <>
       {colourModes.map((colourMode, index) => {
-        return colourMode === currentColorMode ? (
-          <Box as="span" key={index} />
-        ) : (
-          <ThemeUILink
+        return colourMode === currentColorMode ? null : (
+          <NavLink
             href="#!"
             key={index}
             onClick={(e) => {
               e.preventDefault();
               setColorMode(colourMode);
             }}
+            variant={variant}
           >
             {t(`colour-mode-switcher:${colourMode}`, { lng: currentLanguage })}
-          </ThemeUILink>
+          </NavLink>
         );
       })}
     </>
