@@ -25,14 +25,20 @@ const Footer = () => {
       <Box sx={{ display: ['block', null, 'inline-block'] }}>
         <NavLink
           href={`mailto:${t('footer:email', { lng: currentLanguage })}`}
-          sx={{ variant: 'links.footer' }}
-          mr="2"
+          sx={{
+            variant: 'links.footer',
+            display: ['block', null, 'inline-block'],
+          }}
+          mr={['0', '0', '2']}
         >
           {t('footer:email', { lng: currentLanguage })}
         </NavLink>
         <NavLink
           href={`${t('footer:github', { lng: currentLanguage })}`}
-          sx={{ variant: 'links.footer' }}
+          sx={{
+            variant: 'links.footer',
+            display: ['block', null, 'inline-block'],
+          }}
         >
           {t('footer:github', { lng: currentLanguage })}
         </NavLink>
