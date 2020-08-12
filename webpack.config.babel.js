@@ -51,6 +51,10 @@ module.exports = {
         include: resolve(__dirname, 'src'),
         exclude: /node_modules/,
       },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
     ],
   },
   plugins: [
