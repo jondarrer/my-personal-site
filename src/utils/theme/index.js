@@ -6,6 +6,7 @@ export default {
     text: '#000',
     background: '#fff',
     chrome: '#b8b8b8',
+    chromeMenu: '#b8b8b8',
     chromeText: '#fff',
     primary: '#33e',
     modes: {
@@ -13,6 +14,7 @@ export default {
         text: '#fff',
         background: '#000',
         chrome: '#333',
+        chromeMenu: '#b8b8b8',
         chromeText: '#b8b8b8',
         primary: '#0cf',
       },
@@ -56,6 +58,20 @@ export default {
       },
       '&:visited': {
         color: 'chromeText',
+      },
+    },
+    slideOutMenu: {
+      fontWeight: 'footer',
+      fontSize: '3',
+      color: 'chromeMenu',
+      '&:hover': {
+        color: 'chromeMenu',
+      },
+      '&:focus': {
+        color: 'chromeMenu',
+      },
+      '&:visited': {
+        color: 'chromeMenu',
       },
     },
   },

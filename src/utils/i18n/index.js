@@ -27,13 +27,17 @@ const i18n = i18next
           'ro-icon': '🇷🇴',
         },
         footer: {
-          'copyright-notice': '(c) 2020 Jonathan Darrer',
+          'copyright-notice': '© 2020 Jonathan Darrer',
           github: 'https://github.com/jondarrer',
           email: 'jonny@jondarrer.me.uk',
         },
         routes: {
           '/': '/',
           '/ro': '/',
+          '/blog': '/blog',
+          '/ro/blog': '/blog',
+          Home: 'Home',
+          Blog: 'Blog',
         },
         'colour-mode-switcher': {
           light: 'Light Mode',
@@ -52,13 +56,17 @@ const i18n = i18next
           'ro-icon': '🇷🇴',
         },
         footer: {
-          'copyright-notice': '(c) 2020 Jonathan Darrer',
+          'copyright-notice': '© 2020 Jonathan Darrer',
           github: 'https://github.com/jondarrer',
           email: 'jonny@jondarrer.me.uk',
         },
         routes: {
           '/': '/ro',
           '/ro': '/ro',
+          '/blog': '/ro/blog',
+          '/ro/blog': '/ro/blog',
+          Home: 'Casa',
+          Blog: 'Blogul',
         },
         'colour-mode-switcher': {
           light: 'Mod lumină',
