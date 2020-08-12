@@ -20,15 +20,18 @@ import { theme, i18n as _i18n } from '../../utils';
 // the component to test
 import ColourModeSwitcher from './';
 
+const SunIcon = () => <div />;
+const MoonIcon = () => <div />;
+const lightMode = 'light';
+const darkMode = 'dark';
+
 describe('components/ColourModeSwitcher', () => {
   // beforeAll(() => {
-  //   ThemeUI.useColorMode.mockReturnValue(mockUseColorMode);
+  //   ThemeUI.useColorMode.mockReturnValue(mockSetColorMode);
   // });
   it('Should show all modes, except the current one', async () => {
     // Arrange
     const currentLanguage = 'en';
-    const lightMode = 'light';
-    const darkMode = 'dark';
 
     render(
       <ThemeProvider theme={theme}>
@@ -38,7 +41,12 @@ describe('components/ColourModeSwitcher', () => {
             availableLanguages: [currentLanguage],
           }}
         >
-          <ColourModeSwitcher colourModes={['light', 'dark']} />
+          <ColourModeSwitcher
+            colourModes={[
+              { name: lightMode, image: SunIcon },
+              { name: darkMode, image: MoonIcon },
+            ]}
+          />
         </LanguageContext.Provider>
       </ThemeProvider>
     );
@@ -47,14 +55,14 @@ describe('components/ColourModeSwitcher', () => {
 
     // Assert
     expect(
-      screen.queryByText(
+      screen.queryByLabelText(
         i18next.t(`colour-mode-switcher:${lightMode}`, {
           lng: currentLanguage,
         })
       )
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText(
+      screen.queryByLabelText(
         i18next.t(`colour-mode-switcher:${darkMode}`, {
           lng: currentLanguage,
         })
@@ -64,7 +72,6 @@ describe('components/ColourModeSwitcher', () => {
   it('Should allow the current mode to be changed from light to dark', async () => {
     // Arrange
     const currentLanguage = 'en';
-    const darkMode = 'dark';
 
     render(
       <ThemeProvider theme={theme}>
@@ -74,13 +81,18 @@ describe('components/ColourModeSwitcher', () => {
             availableLanguages: [currentLanguage],
           }}
         >
-          <ColourModeSwitcher colourModes={['light', 'dark']} />
+          <ColourModeSwitcher
+            colourModes={[
+              { name: lightMode, image: SunIcon },
+              { name: darkMode, image: MoonIcon },
+            ]}
+          />
         </LanguageContext.Provider>
       </ThemeProvider>
     );
 
     // Act
-    const darkModeButton = screen.queryByText(
+    const darkModeButton = screen.queryByLabelText(
       i18next.t(`colour-mode-switcher:${darkMode}`, {
         lng: currentLanguage,
       })

@@ -10,6 +10,9 @@ import { useLanguage } from '../../contexts';
 import LanguageSwitcher from '../language-switcher';
 import ColourModeSwitcher from '../colour-mode-switcher';
 
+import SunIcon from '../../images/sun.svg';
+import MoonIcon from '../../images/moon.svg';
+
 /**
  * The site navbar
  *
@@ -40,7 +43,13 @@ const Navbar = ({ variant }) => {
         <Box as="span" mr="2">
           <LanguageSwitcher variant={variant} />
         </Box>
-        <ColourModeSwitcher colourModes={['light', 'dark']} variant={variant} />
+        <ColourModeSwitcher
+          colourModes={[
+            { name: 'light', image: SunIcon },
+            { name: 'dark', image: MoonIcon },
+          ]}
+          variant={variant}
+        />
       </Box>
     </Flex>
   );

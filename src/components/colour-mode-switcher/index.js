@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Box, NavLink, useColorMode } from 'theme-ui';
+import { IconButton, useColorMode } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
@@ -25,18 +24,21 @@ const ColourModeSwitcher = ({ colourModes, variant }) => {
   return (
     <>
       {colourModes.map((colourMode, index) => {
-        return colourMode === currentColorMode ? null : (
-          <NavLink
-            href="#!"
+        const Icon = colourMode.image;
+        return colourMode.name === currentColorMode ? null : (
+          <IconButton
             key={index}
             onClick={(e) => {
               e.preventDefault();
-              setColorMode(colourMode);
+              setColorMode(colourMode.name);
             }}
             variant={variant}
+            aria-label={t(`colour-mode-switcher:${colourMode.name}`, {
+              lng: currentLanguage,
+            })}
           >
-            {t(`colour-mode-switcher:${colourMode}`, { lng: currentLanguage })}
-          </NavLink>
+            <Icon width="24px" height="24px" fill="currentcolor" />
+          </IconButton>
         );
       })}
     </>
