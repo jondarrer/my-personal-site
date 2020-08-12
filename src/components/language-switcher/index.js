@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Box, NavLink } from 'theme-ui';
+import { NavLink, Text } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
@@ -24,8 +24,12 @@ const LanguageSwitcher = ({ variant }) => {
             key={index}
             to={t(`routes:${location.pathname}`, { lng: language })}
             variant={variant}
+            aria-label={t(`language-switcher:${language}`, { lng: language })}
+            title={t(`language-switcher:${language}`, { lng: language })}
           >
-            {t(`language-switcher:${language}`, { lng: language })}
+            <Text variant="text.icon">
+              {t(`language-switcher:${language}-icon`, { lng: language })}
+            </Text>
           </NavLink>
         );
       })}

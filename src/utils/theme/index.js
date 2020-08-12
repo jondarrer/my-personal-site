@@ -59,6 +59,11 @@ export default {
       },
     },
   },
+  text: {
+    icon: {
+      fontSize: 5,
+    },
+  },
   styles: {
     root: {
       // uses the theme values provided above

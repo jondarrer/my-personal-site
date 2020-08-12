@@ -22,7 +22,9 @@ const i18n = i18next
         },
         'language-switcher': {
           en: 'English',
+          'en-icon': '🇬🇧',
           ro: 'Romanian',
+          'ro-icon': '🇷🇴',
         },
         footer: {
           'copyright-notice': '(c) 2020 Jonathan Darrer',
@@ -45,7 +47,9 @@ const i18n = i18next
         },
         'language-switcher': {
           en: 'Engleza',
+          'en-icon': '🇬🇧',
           ro: 'Romana',
+          'ro-icon': '🇷🇴',
         },
         footer: {
           'copyright-notice': '(c) 2020 Jonathan Darrer',

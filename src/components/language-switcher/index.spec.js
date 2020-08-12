@@ -42,14 +42,14 @@ describe('components/LanguageSwitcher', () => {
 
     // Assert
     expect(
-      screen.queryByText(
+      screen.queryByLabelText(
         i18next.t(`language-switcher:${currentLanguage}`, {
           lng: currentLanguage,
         })
       )
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText(
+      screen.queryByLabelText(
         i18next.t(`language-switcher:${otherLanguage}`, {
           lng: otherLanguage,
         })
@@ -75,7 +75,7 @@ describe('components/LanguageSwitcher', () => {
     );
 
     // Act
-    const otherLanguageLink = screen.queryByText(
+    const otherLanguageLink = screen.queryByLabelText(
       i18next.t(`language-switcher:${otherLanguage}`, {
         lng: otherLanguage,
       })
