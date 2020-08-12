@@ -82,17 +82,14 @@ const Navbar = ({ variant }) => {
               key={index}
               p={2}
               onClick={() => setOpen(!open)}
-              variant="links.slideOutMenu"
-              sxp={{ verticalAlign: 'super' }}
+              variant="links.header"
+              sxp={{ fontSize: '3' }}
             >
               {t(`routes:${route.text}`, { lng: currentLanguage })}
             </MenuLink>
           ))}
         </Box>
-        <Box
-          sx={{ display: 'inline-block', verticalAlign: 'text-bottom' }}
-          mr="2"
-        >
+        <Box sx={{ display: 'inline-block' }} mr="2">
           <LanguageSwitcher variant={variant} />
         </Box>
         <ColourModeSwitcher
