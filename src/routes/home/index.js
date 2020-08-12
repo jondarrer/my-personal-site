@@ -12,10 +12,10 @@ const HomePage = () => {
     <Flex>
       <Container
         sx={{ maxWidth: '1224px' }}
-        px={['2', '2', '3', '4']}
-        py={['1', '1', '2', '2']}
+        px={['2', null, '3', '4']}
+        py={['1', null, '2']}
       >
-        <Heading as="h1" px={['0', '0', '2', '0']}>
+        <Heading as="h1" px={['0', null, '2', '0']}>
           {t('home-page:hello', { lng: currentLanguage })}
         </Heading>
       </Container>

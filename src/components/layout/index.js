@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <Box as="main" pt={['44px', '44px', '52px', 0]}>
+      <Box as="main" pt={['44px', null, '52px', 0]}>
         {children}
       </Box>
       <Footer />

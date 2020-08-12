@@ -15,8 +15,8 @@ const Footer = () => {
         textAlign: 'center',
         width: '100%',
       }}
-      px={['2', '2', '3', '4']}
-      py={['1', '1', '2', '2']}
+      px={['2', null, '3', '4']}
+      py={['1', null, '2']}
       variant="styles.footer"
     >
       <Text sx={{ display: 'block' }}>
@@ -29,7 +29,7 @@ const Footer = () => {
             variant: 'links.footer',
             display: ['block', null, 'inline-block'],
           }}
-          mr={['0', '0', '2']}
+          mr={['0', null, '2']}
         >
           {t('footer:email', { lng: currentLanguage })}
         </NavLink>

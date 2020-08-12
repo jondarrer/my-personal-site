@@ -17,8 +17,8 @@ const Header = () => (
   >
     <Container
       sx={{ display: 'flex', maxWidth: '1224px' }}
-      px={['2', '2', '3', '4']}
-      py={['1', '1', '2', '2']}
+      px={['2', null, '3', '4']}
+      py={['1', null, '2']}
     >
       <Navbar variant="links.header" />
     </Container>
