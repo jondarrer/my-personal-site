@@ -26,7 +26,7 @@ const Navbar = ({ variant }) => {
     <Flex
       sx={{
         width: '100%',
-        alignItems: 'center',
+        // alignItems: 'center',
         justifyContent: 'space-between',
       }}
       px={['0', '0', '2', '0']}
@@ -40,7 +40,10 @@ const Navbar = ({ variant }) => {
         {t('nav-bar:business-name', { lng: currentLanguage })}
       </NavLink>
       <Box sx={{ lineHeight: '24px' }}>
-        <Box as="span" mr="2">
+        <Box
+          sx={{ display: 'inline-block', verticalAlign: 'text-bottom' }}
+          mr="2"
+        >
           <LanguageSwitcher variant={variant} />
         </Box>
         <ColourModeSwitcher
