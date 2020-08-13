@@ -21,19 +21,30 @@ const App = () => (
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route path="/ro" exact>
+      <Route path="/ro">
         <LanguageContext.Provider
           value={{ currentLanguage: 'ro', availableLanguages }}
         >
           <Layout>
-            <HomePage />
+            <Switch>
+              <Route path="/ro" exact>
+                <HomePage />
+              </Route>
+              <Route path="*">
+                <h1>nu-a-fost-gasit</h1>
+              </Route>
+            </Switch>
           </Layout>
         </LanguageContext.Provider>
       </Route>
-      <Route>
-        <Layout>
-          <h1>not-found</h1>
-        </Layout>
+      <Route path="*">
+        <LanguageContext.Provider
+          value={{ currentLanguage: 'en', availableLanguages }}
+        >
+          <Layout>
+            <h1>not-found</h1>
+          </Layout>
+        </LanguageContext.Provider>
       </Route>
     </Switch>
   </ThemeProvider>

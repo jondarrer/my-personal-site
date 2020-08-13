@@ -77,7 +77,7 @@ export default {
   },
   text: {
     icon: {
-      fontSize: 5,
+      fontSize: 4,
     },
   },
   styles: {
