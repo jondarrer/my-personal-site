@@ -284,6 +284,7 @@
   "globals": {
     "jest": true,
     "describe": true,
+    "beforeEach": true,
     "it": true,
     "expect": true
   }

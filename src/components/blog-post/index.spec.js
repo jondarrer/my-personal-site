@@ -3,6 +3,16 @@ import React from 'react';
 const mockMarkdown = '# This is a header\n\nAnd this is a paragraph';
 const mockMarkdownResult = 'This is a headerAnd this is a paragraph';
 jest.mock('react-markdown', () => () => mockMarkdownResult);
+jest.mock('../../utils', () => {
+  return {
+    ...jest.requireActual('../../utils'),
+    getPostInfo: () => {
+      return {
+        markdown: mockMarkdown,
+      };
+    },
+  };
+});
 
 // Import react-testing methods
 import { render, screen } from '@testing-library/react';
@@ -16,8 +26,7 @@ describe('components/BlogPost', () => {
     // Arrange
 
     // Act
-    render(<BlogPost markdown={mockMarkdown} />);
-    screen.debug();
+    render(<BlogPost postId="postId" />);
 
     // Assert
     expect(screen.queryByText(mockMarkdownResult)).toBeInTheDocument();
