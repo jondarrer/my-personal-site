@@ -1,4 +1,3 @@
-/* global describe it expect */
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
@@ -21,7 +20,7 @@ describe('components/MenuLink', () => {
     const linkContent = 'A link';
 
     // Act
-    const res = render(
+    render(
       <Router history={history}>
         <MenuLink to="/another-page">{linkContent}</MenuLink>
       </Router>
