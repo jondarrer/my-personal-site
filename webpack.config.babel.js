@@ -1,3 +1,5 @@
+/* eslint-disable prefer-named-capture-group */
+/* eslint-disable require-unicode-regexp */
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ReactStaticSiteHydrater from 'react-static-site-hydrater';
 import SitemapPlugin from 'sitemap-webpack-plugin';
@@ -8,9 +10,11 @@ import { resolve } from 'path';
 import App from './src/app';
 
 const pad = (n, width, z) => {
-  z = z || '0';
-  n = n + '';
-  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+  const z1 = z || '0';
+  const n1 = String(n);
+  return n1.length >= width
+    ? n1
+    : new Array(width - n1.length + 1).join(z1) + n1;
 };
 
 const today = new Date();
@@ -32,11 +36,23 @@ const paths = [
     priority: '0.8',
     changefreq: 'daily',
   },
+  {
+    path: '/blog/post-1',
+    lastmod,
+    priority: '0.8',
+    changefreq: 'daily',
+  },
+  {
+    path: '/ro/blog/post-2',
+    lastmod,
+    priority: '0.8',
+    changefreq: 'daily',
+  },
 ];
 
 const routes = paths.map((path) => path.path);
 
-module.exports = {
+export default {
   entry: resolve(__dirname, 'src'),
   output: {
     path: resolve(__dirname, 'dist'),
