@@ -5,5 +5,11 @@ module.exports = {
     '@babel/plugin-transform-react-jsx',
     '@babel/plugin-transform-regenerator',
     '@babel/plugin-transform-runtime',
+    [
+      'babel-plugin-inline-import',
+      {
+        extensions: ['.md'],
+      },
+    ],
   ],
 };
