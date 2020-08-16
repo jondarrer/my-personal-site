@@ -18,7 +18,8 @@ const i18n = i18next
       en: {
         'nav-bar': { 'business-name': 'jondarrer.com' },
         'home-page': {
-          hello: 'Hello!',
+          hello: 'Hello,',
+          'my-name-is': 'My name is Jonathan Darrer',
         },
         'language-switcher': {
           en: 'English',
@@ -62,7 +63,8 @@ const i18n = i18next
       ro: {
         'nav-bar': { 'business-name': 'jondarrer.com' },
         'home-page': {
-          hello: 'Buna!',
+          hello: 'Buna,',
+          'my-name-is': 'Numele meu este Jonathan Darrer',
         },
         'language-switcher': {
           en: 'Engleza',

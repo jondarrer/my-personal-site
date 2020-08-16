@@ -11,5 +11,17 @@ module.exports = {
         extensions: ['.md'],
       },
     ],
+
+    [
+      'file-loader',
+      {
+        name: '[hash].[ext]',
+        extensions: ['png', 'jpg', 'jpeg', 'gif'],
+        publicPath: '/images',
+        outputPath: '/dist/images',
+        context: '',
+        limit: 0,
+      },
+    ],
   ],
 };
