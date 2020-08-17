@@ -5,3 +5,4 @@ export { default as Footer } from './footer';
 export { default as Layout } from './layout';
 export { default as ColourModeSwitcher } from './colour-mode-switcher';
 export { default as BlogPost } from './blog-post';
+export { default as Meta } from './meta';

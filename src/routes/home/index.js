@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Flex, Grid, Heading, Image } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 import { useLanguage } from '../../contexts';
 import { getLanguageForLocale } from '../../utils';
@@ -18,6 +19,7 @@ import portrait from '../../images/jondarrer-soften-portrait.jpg';
 const HomePage = ({ locales }) => {
   const { currentLanguage } = useLanguage();
   const { t } = useTranslation();
+  const location = useLocation();
 
   return (
     <>
