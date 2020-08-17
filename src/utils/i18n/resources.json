@@ -3,7 +3,8 @@
     "nav-bar": {
       "business-name": "jondarrer.com",
       "home": "Home",
-      "blog": "Blog"
+      "blog": "Blog",
+      "domain": "jondarrer.com"
     },
     "home-page": {
       "hello": "Hello,",
@@ -43,13 +44,19 @@
       "post-2-author": "Jonathan Darrer",
       "post-2-date-posted": "2020-08-16",
       "post-2-tags": "test"
+    },
+    "meta": {
+      "meta-description-home": "Software Engineer in London, UK",
+      "meta-keywords": "Software Engineer",
+      "meta-business-description": "Software Engineer in London, UK"
     }
   },
   "ro": {
     "nav-bar": {
       "business-name": "jondarrer.com",
       "home": "Casa",
-      "blog": "Blogul"
+      "blog": "Blogul",
+      "domain": "jondarrer.com"
     },
     "home-page": {
       "hello": "Buna,",
@@ -89,6 +96,11 @@
       "post-2-author": "Jonathan Darrer",
       "post-2-date-posted": "2020-08-16",
       "post-2-tags": "test"
+    },
+    "meta": {
+      "meta-description-home": "Inginer software în Londra, Marea Britanie",
+      "meta-keywords": "Inginer software",
+      "meta-business-description": "Inginer software în Londra, Marea Britanie"
     }
   }
 }

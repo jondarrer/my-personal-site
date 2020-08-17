@@ -9,6 +9,8 @@ import { theme, i18n as _i18n } from './utils';
 
 const availableLanguages = ['en', 'ro'];
 
+const locales = ['ro', 'en-gb'];
+
 const App = () => (
   <ThemeProvider theme={theme}>
     <Switch>
@@ -17,7 +19,7 @@ const App = () => (
           value={{ currentLanguage: 'en', availableLanguages }}
         >
           <Layout>
-            <HomePage />
+            <HomePage locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
@@ -26,7 +28,7 @@ const App = () => (
           value={{ currentLanguage: 'en', availableLanguages }}
         >
           <Layout>
-            <BlogPostPage />
+            <BlogPostPage locales={locales} />
           </Layout>
         </LanguageContext.Provider>
       </Route>
@@ -37,10 +39,10 @@ const App = () => (
           <Layout>
             <Switch>
               <Route path="/ro" exact>
-                <HomePage />
+                <HomePage locales={locales} />
               </Route>
               <Route path="/ro/blog/:postId">
-                <BlogPostPage />
+                <BlogPostPage locales={locales} />
               </Route>
               <Route path="*">
                 <h1>nu-a-fost-gasit</h1>
