@@ -6,10 +6,12 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../contexts';
 
 /**
- * Provides a way to change from the current language to another one from the provided list
+ * Props for the BlogPost type
  *
- * @type {React.FC}
+ * @typedef {object} Props
+ * @property {string} variant The theme to apply to the links
  */
+
 const LanguageSwitcher = ({ variant }) => {
   const { currentLanguage, availableLanguages } = useLanguage();
   const { t } = useTranslation();
@@ -26,6 +28,7 @@ const LanguageSwitcher = ({ variant }) => {
             variant={variant}
             aria-label={t(`language-switcher:${language}`, { lng: language })}
             title={t(`language-switcher:${language}`, { lng: language })}
+            sxp={{ fontSize: '3' }}
           >
             <Text variant="text.icon">
               {t(`language-switcher:${language}-icon`, { lng: language })}

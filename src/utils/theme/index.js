@@ -35,6 +35,7 @@ export default {
   },
   links: {
     header: {
+      fontSize: '3',
       fontWeight: 'header',
       color: 'chromeText',
       '&:hover': {
@@ -77,7 +78,7 @@ export default {
   },
   text: {
     icon: {
-      fontSize: 4,
+      fontSize: '3',
     },
   },
   styles: {

@@ -11,11 +11,6 @@ import { useLanguage } from '../../contexts';
  * @property {Array<string>} colourModes The available colour modes
  */
 
-/**
- * Provides a way to change from the current language to another one from the provided list
- *
- * @type {React.FC<Props>}
- */
 const ColourModeSwitcher = ({ colourModes, variant }) => {
   const { currentLanguage } = useLanguage();
   const { t } = useTranslation();
@@ -37,7 +32,7 @@ const ColourModeSwitcher = ({ colourModes, variant }) => {
               lng: currentLanguage,
             })}
           >
-            <Icon width="24px" height="24px" fill="currentcolor" />
+            <Icon width="20px" height="20px" fill="currentcolor" />
           </IconButton>
         );
       })}
