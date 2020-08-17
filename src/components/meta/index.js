@@ -6,6 +6,8 @@ import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts';
 import { getLanguageForLocale } from '../../utils';
 
+import getTitle from './get-title';
+
 import portrait from '../../images/jondarrer-soften-portrait.jpg';
 
 /**
@@ -15,18 +17,16 @@ import portrait from '../../images/jondarrer-soften-portrait.jpg';
  * @property {Array<string>}} locales The theme to apply to the links
  */
 
-const Meta = ({ locales }) => {
+const Meta = ({ locales, pageTitle, keywords, description, picture }) => {
   const { currentLanguage } = useLanguage();
   const { t } = useTranslation();
   const location = useLocation();
+  const title = getTitle(pageTitle);
 
   return (
     <Helmet>
       <html lang={currentLanguage} />
-      <title>
-        {t(`nav-bar:blog`, { currentLanguage })} -{' '}
-        {t('nav-bar:domain', { currentLanguage })}
-      </title>
+      <title>{title}</title>
       {locales.map((locale) => {
         const lng = getLanguageForLocale(locale);
         return (
@@ -45,11 +45,13 @@ const Meta = ({ locales }) => {
       })}
       <meta
         name="description"
-        content={t('meta:meta-description-blog', { currentLanguage })}
+        content={
+          description || t('meta:meta-description-home', { currentLanguage })
+        }
       />
       <meta
         name="keywords"
-        content={t('meta:meta-keywords', { currentLanguage })}
+        content={keywords || t('meta:meta-keywords', { currentLanguage })}
       />
       <meta
         property="og:title"
@@ -67,14 +69,19 @@ const Meta = ({ locales }) => {
       />
       <meta
         property="og:description"
-        content={t('meta:meta-description-blog', { currentLanguage })}
+        content={
+          description || t('meta:meta-description-home', { currentLanguage })
+        }
       />
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
-        content={`https://${t('nav-bar:domain', {
-          currentLanguage,
-        })}${portrait}`}
+        content={`https://${
+          picture ||
+          t('nav-bar:domain', {
+            currentLanguage,
+          })
+        }${portrait}`}
       />
       <script type="application/ld+json">
         {`{

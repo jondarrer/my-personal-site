@@ -27,7 +27,6 @@ describe('components/MenuLink', () => {
     );
 
     // Assert
-    screen.debug();
     expect(screen.getByText(linkContent)).toHaveAttribute('href');
   });
   it('should produce a when the page matches', () => {
@@ -42,7 +41,6 @@ describe('components/MenuLink', () => {
     );
 
     // Assert
-    screen.debug();
     expect(screen.getByText(textContent)).not.toHaveAttribute('to');
   });
 });

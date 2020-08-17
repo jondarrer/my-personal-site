@@ -46,6 +46,7 @@
       "post-2-tags": "test"
     },
     "meta": {
+      "default-page-title": "Jonathan Darrer",
       "meta-description-home": "Software Engineer in London, UK",
       "meta-keywords": "Software Engineer",
       "meta-business-description": "Software Engineer in London, UK"
@@ -98,6 +99,7 @@
       "post-2-tags": "test"
     },
     "meta": {
+      "default-page-title": "Jonathan Darrer",
       "meta-description-home": "Inginer software în Londra, Marea Britanie",
       "meta-keywords": "Inginer software",
       "meta-business-description": "Inginer software în Londra, Marea Britanie"

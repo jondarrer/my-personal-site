@@ -3,6 +3,7 @@ import { Container, Flex } from 'theme-ui';
 import { useParams } from 'react-router-dom';
 
 import { BlogPost, Meta } from '../../components';
+import { getPostInfo } from '../../utils';
 
 /**
  * Props for the BlogPostPage type
@@ -13,17 +14,23 @@ import { BlogPost, Meta } from '../../components';
 
 const BlogPostPage = ({ locales }) => {
   const { postId } = useParams();
+  const postInfo = getPostInfo(postId);
 
   return (
     <>
-      <Meta locales={locales} />
+      <Meta
+        locales={locales}
+        pageTitle={postInfo.title}
+        keywords={postInfo.tags}
+        description={postInfo.description}
+      />
       <Flex>
         <Container
           sx={{ maxWidth: '1224px' }}
           px={['2', null, '3', '4']}
           py={['1', null, '2']}
         >
-          <BlogPost postId={postId} />
+          <BlogPost postInfo={postInfo} />
         </Container>
       </Flex>
     </>

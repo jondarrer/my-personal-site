@@ -3,16 +3,6 @@ import React from 'react';
 const mockMarkdown = '# This is a header\n\nAnd this is a paragraph';
 const mockMarkdownResult = 'This is a headerAnd this is a paragraph';
 jest.mock('react-markdown', () => () => mockMarkdownResult);
-jest.mock('../../utils', () => {
-  return {
-    ...jest.requireActual('../../utils'),
-    getPostInfo: () => {
-      return {
-        markdown: mockMarkdown,
-      };
-    },
-  };
-});
 
 // Import react-testing methods
 import { render, screen } from '@testing-library/react';
@@ -24,9 +14,12 @@ import BlogPost from './';
 describe('components/BlogPost', () => {
   it('Should show all modes, except the current one', async () => {
     // Arrange
+    const postInfo = {
+      markdown: mockMarkdown,
+    };
 
     // Act
-    render(<BlogPost postId="postId" />);
+    render(<BlogPost postInfo={postInfo} />);
 
     // Assert
     expect(screen.queryByText(mockMarkdownResult)).toBeInTheDocument();

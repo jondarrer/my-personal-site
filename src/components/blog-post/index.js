@@ -2,18 +2,18 @@ import React from 'react';
 import { Heading, Text } from 'theme-ui';
 import ReactMarkdown from 'react-markdown';
 
-import { getPostInfo } from '../../utils';
+/**
+ * @typedef {import('../../models').PostInfo} PostInfo
+ */
 
 /**
  * Props for the BlogPost type
  *
  * @typedef {object} Props
- * @property {string} postId The id of the blog post
+ * @property {PostInfo} postInfo Blog post info
  */
 
-const BlogPost = ({ postId }) => {
-  const postInfo = getPostInfo(postId);
-
+const BlogPost = ({ postInfo }) => {
   return (
     <>
       <ReactMarkdown
