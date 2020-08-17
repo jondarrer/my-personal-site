@@ -7,6 +7,10 @@ import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { resolve } from 'path';
 
+import resources from './src/utils/i18n/resources.json';
+const {
+  en: { routes: enRoutes },
+} = resources;
 import App from './src/app';
 
 const pad = (n, width, z) => {
@@ -22,35 +26,18 @@ const lastmod = `${pad(today.getFullYear(), 2)}-${pad(
   today.getMonth() + 1,
   2
 )}-${pad(today.getDate(), 2)}`;
-
-const paths = [
-  {
-    path: '/',
+const priority = '0.8';
+const changefreq = 'daily';
+const paths = [];
+const routes = Object.keys(enRoutes);
+routes.forEach((route) => {
+  paths.push({
+    path: route,
     lastmod,
-    priority: '0.8',
-    changefreq: 'daily',
-  },
-  {
-    path: '/ro',
-    lastmod,
-    priority: '0.8',
-    changefreq: 'daily',
-  },
-  {
-    path: '/blog/post-1',
-    lastmod,
-    priority: '0.8',
-    changefreq: 'daily',
-  },
-  {
-    path: '/ro/blog/post-2',
-    lastmod,
-    priority: '0.8',
-    changefreq: 'daily',
-  },
-];
-
-const routes = paths.map((path) => path.path);
+    priority,
+    changefreq,
+  });
+});
 
 export default {
   entry: resolve(__dirname, 'src'),

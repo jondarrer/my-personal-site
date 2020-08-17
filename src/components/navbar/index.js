@@ -1,8 +1,6 @@
-/** @jsx jsx */
-/** @jsxFrag React.Fragment */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Flex, MenuButton, NavLink, jsx } from 'theme-ui';
+import { Box, Flex, MenuButton, NavLink } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
@@ -16,22 +14,24 @@ import SunIcon from '../../images/sun.svg';
 import MoonIcon from '../../images/moon.svg';
 
 /**
- * The site navbar
+ * Props for the Navbar type
  *
- * @type {React.FC}
+ * @typedef {object} Props
+ * @property {string} variant The theme to apply to the links
  */
+
 const Navbar = ({ variant }) => {
   const { currentLanguage } = useLanguage();
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const routes = [
     {
-      to: '/',
-      text: 'Home',
+      to: t('routes:/', { lng: currentLanguage }),
+      text: t('nav-bar:home', { lng: currentLanguage }),
     },
     {
-      to: '/blog',
-      text: 'Blog',
+      to: t('routes:/blog', { lng: currentLanguage }),
+      text: t('nav-bar:blog', { lng: currentLanguage }),
     },
   ];
 
@@ -78,14 +78,14 @@ const Navbar = ({ variant }) => {
         <Box sx={{ display: ['none', null, 'inline-block'] }}>
           {routes.map((route, index) => (
             <MenuLink
-              to={t(`routes:${route.to}`, { lng: currentLanguage })}
+              to={route.to}
               key={index}
               p={2}
               onClick={() => setOpen(!open)}
               variant="links.header"
               sxp={{ fontSize: '3' }}
             >
-              {t(`routes:${route.text}`, { lng: currentLanguage })}
+              {route.text}
             </MenuLink>
           ))}
         </Box>
