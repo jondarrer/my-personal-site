@@ -76,12 +76,9 @@ const Meta = ({ locales, pageTitle, keywords, description, picture }) => {
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
-        content={`https://${
-          picture ||
-          t('nav-bar:domain', {
-            currentLanguage,
-          })
-        }${portrait}`}
+        content={`https://${t('nav-bar:domain', {
+          currentLanguage,
+        })}${picture || portrait}`}
       />
       <script type="application/ld+json">
         {`{
