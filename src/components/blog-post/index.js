@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Text } from 'theme-ui';
+import { Heading, Image, Text } from 'theme-ui';
 import ReactMarkdown from 'react-markdown';
 
 /**
@@ -23,6 +23,9 @@ const BlogPost = ({ postInfo }) => {
             <Heading as={`h${props.level}`}>{children}</Heading>
           ),
           paragraph: ({ children }) => <Text as="p">{children}</Text>,
+          image: ({ children: _, ...props }) => (
+            <Image alt={props.alt} src={props.src} />
+          ),
           text: ({ children }) => <Text>{children}</Text>,
         }}
       />

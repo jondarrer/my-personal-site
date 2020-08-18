@@ -9,6 +9,7 @@ export const fake = 0;
  * @property {string} author The author of the post
  * @property {string} datePosted The date the post was made
  * @property {string} tags The tags for the post
+ * @property {string} picture The picture for the post
  * @property {string} fileName The fileName for the post
  * @property {string} markdown The markdown of the post
  */

@@ -30,8 +30,12 @@ const getPostInfo = (postId) => {
     lng: currentLanguage,
   });
   const tags = t(`blog-posts:${postId}-tags`, { lng: currentLanguage });
-  const fileName = postId?.replace('-', '');
-  const markdown = posts[fileName];
+  const picture = t(`blog-posts:${postId}-picture`, { lng: currentLanguage });
+  /* eslint-disable require-unicode-regexp  */
+  /* eslint-disable prefer-named-capture-group */
+  const fileName = postId?.replace(/-([a-z0-9])/g, (g) => {
+    return g[1].toUpperCase();
+  });
 
   return {
     id: postId,
@@ -40,8 +44,9 @@ const getPostInfo = (postId) => {
     author,
     datePosted,
     tags,
+    picture,
     fileName,
-    markdown,
+    markdown: posts[fileName],
   };
 };
 

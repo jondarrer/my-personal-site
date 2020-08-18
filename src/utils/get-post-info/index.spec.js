@@ -40,29 +40,26 @@ describe('utils/getPostInfo', () => {
     const author = 'The author';
     const datePosted = '1970-01-01';
     const tags = 'mock';
+    const picture = 'IMG';
 
     mockUseTranslation.mockImplementation((id, _opts) => {
-      let result;
       switch (id) {
         case `blog-posts:${postId}-title`:
-          result = title;
-          break;
+          return title;
         case `blog-posts:${postId}-description`:
-          result = description;
-          break;
+          return description;
         case `blog-posts:${postId}-author`:
-          result = author;
-          break;
+          return author;
         case `blog-posts:${postId}-date-posted`:
-          result = datePosted;
-          break;
+          return datePosted;
         case `blog-posts:${postId}-tags`:
-          result = tags;
-          break;
+          return tags;
+        case `blog-posts:${postId}-picture`:
+          return picture;
         default:
           break;
       }
-      return result;
+      return null;
     });
 
     // Act
@@ -76,6 +73,7 @@ describe('utils/getPostInfo', () => {
       author,
       datePosted,
       tags,
+      picture,
       fileName: 'post1',
       markdown: mockBlogPostMarkdown,
     });

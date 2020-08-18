@@ -23,6 +23,7 @@ const BlogPostPage = ({ locales }) => {
         pageTitle={postInfo.title}
         keywords={postInfo.tags}
         description={postInfo.description}
+        picture={postInfo.picture}
       />
       <Flex>
         <Container
