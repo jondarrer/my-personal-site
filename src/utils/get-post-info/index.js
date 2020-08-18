@@ -4,8 +4,10 @@ import { useLanguage } from '../../contexts';
 
 import post1 from '../../markdown/post-1.md';
 import post2 from '../../markdown/post-2.md';
+import peaSoupRecipe from '../../markdown/pea-soup-recipe.md';
+import retetaDeCiorbaDeMazare from '../../markdown/reteta-de-ciorba-de-mazare.md';
 
-const posts = { post1, post2 };
+const posts = { post1, post2, peaSoupRecipe, retetaDeCiorbaDeMazare };
 
 /**
  * @typedef {import('../../models').PostInfo} PostInfo
