@@ -18,24 +18,26 @@ import portrait from '../../images/jondarrer-soften-portrait.jpg';
  */
 
 const Meta = ({ locales, pageTitle, keywords, description, picture }) => {
-  const { currentLanguage } = useLanguage();
+  const { currentLanguage: lng } = useLanguage();
   const { t } = useTranslation();
   const location = useLocation();
   const title = getTitle(pageTitle);
+  const baseUrl = `https://${t('nav-bar:domain', { lng })}`;
+  const pictureUrl = `${baseUrl}${picture || portrait}`;
 
   return (
     <Helmet>
-      <html lang={currentLanguage} />
+      <html lang={lng} />
       <title>{title}</title>
       {locales.map((locale) => {
-        const lng = getLanguageForLocale(locale);
+        const localLng = getLanguageForLocale(locale);
         return (
           <link
             rel="alternate"
-            href={`https://${t('nav-bar:domain', { lng })}${t(
+            href={`https://${t('nav-bar:domain', { lng: localLng })}${t(
               'routes:' + location.pathname,
               {
-                lng,
+                lng: localLng,
               }
             )}`}
             hrefLang={locale}
@@ -45,60 +47,48 @@ const Meta = ({ locales, pageTitle, keywords, description, picture }) => {
       })}
       <meta
         name="description"
-        content={
-          description || t('meta:meta-description-home', { currentLanguage })
-        }
+        content={description || t('meta:meta-description-home', { lng })}
       />
       <meta
         name="keywords"
-        content={keywords || t('meta:meta-keywords', { currentLanguage })}
+        content={keywords || t('meta:meta-keywords', { lng })}
       />
       <meta
         property="og:title"
         content={`${t('nav-bar:business-name', {
-          currentLanguage,
-        })} - ${t('meta:meta-business-description', { currentLanguage })}`}
+          lng,
+        })} - ${t('meta:meta-business-description', { lng })}`}
       />
       <meta
         property="og:site_name"
-        content={t('nav-bar:business-name', { currentLanguage })}
+        content={t('nav-bar:business-name', { lng })}
       />
-      <meta
-        property="og:url"
-        content={`https://${t('nav-bar:domain', { currentLanguage })}`}
-      />
+      <meta property="og:url" content={baseUrl} />
       <meta
         property="og:description"
-        content={
-          description || t('meta:meta-description-home', { currentLanguage })
-        }
+        content={description || t('meta:meta-description-home', { lng })}
       />
       <meta property="og:type" content="website" />
-      <meta
-        property="og:image"
-        content={`https://${t('nav-bar:domain', {
-          currentLanguage,
-        })}${picture || portrait}`}
-      />
+      <meta property="og:image" content={pictureUrl} />
       <script type="application/ld+json">
         {`{
           "@context": {
             "@id": "https://schema.org",
             "name": {
               "@id": "https://schema.org/name",
-              "@language": "${currentLanguage}"
+              "@language": "${lng}"
             },
             "url": {
               "@id": "https://schema.org/url",
-              "@language": "${currentLanguage}"
+              "@language": "${lng}"
             }
           },
           "@type": "Organization",
-          "url": "https://${t('nav-bar:domain', { currentLanguage })}",
-          "name": "${t('nav-bar:business-name', { currentLanguage })}",
+          "url": "${baseUrl}",
+          "name": "${t('nav-bar:business-name', { lng })}",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "${t('footer:email', { currentLanguage })}",
+            "telephone": "${t('footer:email', { lng })}",
             "contactType": "customer service"
           }
         }`}
