@@ -53,17 +53,12 @@ const Meta = ({ locales, pageTitle, keywords, description, picture }) => {
         name="keywords"
         content={keywords || t('meta:meta-keywords', { lng })}
       />
-      <meta
-        property="og:title"
-        content={`${t('nav-bar:business-name', {
-          lng,
-        })} - ${t('meta:meta-business-description', { lng })}`}
-      />
+      <meta property="og:title" content={title} />
       <meta
         property="og:site_name"
         content={t('nav-bar:business-name', { lng })}
       />
-      <meta property="og:url" content={baseUrl} />
+      <meta property="og:url" content={`${baseUrl}${location.pathname}`} />
       <meta
         property="og:description"
         content={description || t('meta:meta-description-home', { lng })}
