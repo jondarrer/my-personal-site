@@ -29,7 +29,7 @@
       "/ro/blog": "/blog",
       "/ro/blog/post-2": "/blog/post-1",
       "/blog/pea-soup-recipe": "/blog/pea-soup-recipe",
-      "/ro/blog/reteta-de-ciorba-de-mazare": "/blog/pea-soup-recipe"
+      "/ro/blog/reteta-de-supa-de-mazare": "/blog/pea-soup-recipe"
     },
     "colour-mode-switcher": {
       "light": "Light Mode",
@@ -52,12 +52,12 @@
       "pea-soup-recipe-date-posted": "2020-08-18",
       "pea-soup-recipe-tags": "food,soup",
       "pea-soup-recipe-picture": "/images/IMG_1078_LOWRES.jpg",
-      "reteta-de-ciorba-de-mazare-title": "Reteta de ciorba de mazare",
-      "reteta-de-ciorba-de-mazare-description": "O rețetă simplă de ciorba de mazare",
-      "reteta-de-ciorba-de-mazare-author": "Jonathan Darrer",
-      "reteta-de-ciorba-de-mazare-date-posted": "2020-08-18",
-      "reteta-de-ciorba-de-mazare-tags": "mancare,ciorba",
-      "reteta-de-ciorba-de-mazare-picture": "/images/IMG_1078_LOWRES.jpg"
+      "reteta-de-supa-de-mazare-title": "Reteta de supă de mazare",
+      "reteta-de-supa-de-mazare-description": "O rețetă simplă de supă de mazare",
+      "reteta-de-supa-de-mazare-author": "Jonathan Darrer",
+      "reteta-de-supa-de-mazare-date-posted": "2020-08-18",
+      "reteta-de-supa-de-mazare-tags": "mancare,supă",
+      "reteta-de-supa-de-mazare-picture": "/images/IMG_1078_LOWRES.jpg"
     },
     "meta": {
       "default-page-title": "Jonathan Darrer",
@@ -95,8 +95,8 @@
       "/blog/post-1": "/ro/blog/post-2",
       "/ro/blog": "/ro/blog",
       "/ro/blog/post-2": "/ro/blog/post-2",
-      "/blog/pea-soup-recipe": "/ro/blog/reteta-de-ciorba-de-mazare",
-      "/ro/blog/reteta-de-ciorba-de-mazare": "/ro/blog/reteta-de-ciorba-de-mazare"
+      "/blog/pea-soup-recipe": "/ro/blog/reteta-de-supa-de-mazare",
+      "/ro/blog/reteta-de-supa-de-mazare": "/ro/blog/reteta-de-supa-de-mazare"
     },
     "colour-mode-switcher": {
       "light": "Mod lumină",

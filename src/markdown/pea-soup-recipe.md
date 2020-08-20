@@ -6,6 +6,7 @@
 
 * Peas
 * Onions
+* Bacon
 * Water
 * Bouillon
 * Mint
