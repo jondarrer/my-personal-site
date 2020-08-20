@@ -20,33 +20,32 @@ const posts = { post1, post2, peaSoupRecipe, retetaDeSupaDeMazare };
  * @return {PostInfo} The info for the post
  */
 const getPostInfo = (postId) => {
-  const { currentLanguage } = useLanguage();
+  const { currentLanguage: lng } = useLanguage();
   const { t } = useTranslation();
 
-  const title = t(`blog-posts:${postId}-title`, { lng: currentLanguage });
-  const description = t(`blog-posts:${postId}-description`, {
-    lng: currentLanguage,
-  });
-  const author = t(`blog-posts:${postId}-author`, { lng: currentLanguage });
-  const datePosted = t(`blog-posts:${postId}-date-posted`, {
-    lng: currentLanguage,
-  });
-  const tags = t(`blog-posts:${postId}-tags`, { lng: currentLanguage });
-  const picture = t(`blog-posts:${postId}-picture`, { lng: currentLanguage });
   /* eslint-disable require-unicode-regexp  */
   /* eslint-disable prefer-named-capture-group */
   const fileName = postId?.replace(/-([a-z0-9])/g, (g) => {
     return g[1].toUpperCase();
   });
 
+  if (!posts.hasOwnProperty(fileName)) {
+    throw new Error(`Unable to find post "${postId}"`);
+  }
+
   return {
     id: postId,
-    title,
-    description,
-    author,
-    datePosted,
-    tags,
-    picture,
+    title: t(`blog-posts:${postId}-title`, { lng }),
+    description: t(`blog-posts:${postId}-description`, {
+      lng,
+    }),
+    author: t(`blog-posts:${postId}-author`, { lng }),
+    datePosted: t(`blog-posts:${postId}-date-posted`, {
+      lng,
+    }),
+    tags: t(`blog-posts:${postId}-tags`, { lng }),
+    picture: t(`blog-posts:${postId}-picture`, { lng }),
+    language: t(`blog-posts:${postId}-language`, { lng }),
     fileName,
     markdown: posts[fileName],
   };

@@ -32,6 +32,7 @@ describe('utils/getPostInfo', () => {
   beforeEach(() => {
     mockUseTranslation.mockReset();
   });
+  /* eslint-disable max-statements */
   it('should get the post info for a valid post', async () => {
     // Arrange
     const postId = 'post-1';
@@ -41,6 +42,7 @@ describe('utils/getPostInfo', () => {
     const datePosted = '1970-01-01';
     const tags = 'mock';
     const picture = 'IMG';
+    const language = 'en';
 
     mockUseTranslation.mockImplementation((id, _opts) => {
       switch (id) {
@@ -56,6 +58,8 @@ describe('utils/getPostInfo', () => {
           return tags;
         case `blog-posts:${postId}-picture`:
           return picture;
+        case `blog-posts:${postId}-language`:
+          return language;
         default:
           break;
       }
@@ -74,8 +78,18 @@ describe('utils/getPostInfo', () => {
       datePosted,
       tags,
       picture,
+      language,
       fileName: 'post1',
       markdown: mockBlogPostMarkdown,
     });
+  });
+  it('should error for an invalid post', async () => {
+    // Arrange
+    const postId = 'post-none';
+
+    // Act & Assert
+    expect(() => getPostInfo(postId)).toThrow(
+      new Error(`Unable to find post "${postId}"`)
+    );
   });
 });

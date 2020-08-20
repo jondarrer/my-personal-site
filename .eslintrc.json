@@ -172,6 +172,7 @@
     "no-process-exit": "error",
     "no-promise-executor-return": "error",
     "no-proto": "error",
+    "no-prototype-builtins": "off",
     "no-restricted-exports": "error",
     "no-restricted-globals": "error",
     "no-restricted-imports": "error",
