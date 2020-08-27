@@ -6,6 +6,7 @@
   "scripts": {
     "analyzer": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
     "build": "webpack",
+    "prepare": "npm run build",
     "start": "webpack-dev-server --open",
     "prestart:fb": "npm run build",
     "start:fb": "firebase serve --only hosting",
