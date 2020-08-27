@@ -12,6 +12,7 @@ const {
   en: { routes: enRoutes },
 } = resources;
 import App from './src/app';
+import { client } from './src/client';
 
 const pad = (n, width, z) => {
   const z1 = z || '0';
@@ -71,6 +72,7 @@ export default {
       routes,
       component: App,
       baseFilename: 'default.html',
+      plugins: ['react-router', 'helmet', ['apollo', { client }]],
     }),
     new CopyPlugin({
       patterns: [

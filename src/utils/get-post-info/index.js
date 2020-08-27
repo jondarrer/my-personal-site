@@ -17,11 +17,22 @@ const posts = { post1, post2, peaSoupRecipe, retetaDeSupaDeMazare };
  * The info for the post
  *
  * @param {string} postId The id of the post
+ * @param {undefined|string} language The id of the post
+ * @param {undefined|TFunction} translation The id of the post
  * @return {PostInfo} The info for the post
  */
-const getPostInfo = (postId) => {
-  const { currentLanguage: lng } = useLanguage();
-  const { t } = useTranslation();
+/* eslint-disable max-statements */
+const getPostInfo = (postId, language, translation) => {
+  let lng = language;
+  let t = translation;
+  if (!lng) {
+    const { currentLanguage } = useLanguage();
+    lng = currentLanguage;
+  }
+  if (!t) {
+    const { t: trans } = useTranslation();
+    t = trans;
+  }
 
   /* eslint-disable require-unicode-regexp  */
   /* eslint-disable prefer-named-capture-group */

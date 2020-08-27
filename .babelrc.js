@@ -8,7 +8,7 @@ module.exports = {
     [
       'babel-plugin-inline-import',
       {
-        extensions: ['.md'],
+        extensions: ['.md', '.graphql'],
       },
     ],
 

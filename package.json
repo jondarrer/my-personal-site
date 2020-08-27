@@ -6,7 +6,6 @@
   "scripts": {
     "analyzer": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
     "build": "webpack",
-    "prepare": "npm run build",
     "start": "webpack-dev-server --open",
     "prestart:fb": "npm run build",
     "start:fb": "firebase serve --only hosting",
@@ -57,7 +56,7 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react-markdown": "^4.3.1",
-    "react-static-site-hydrater": "^2.1.1",
+    "react-static-site-hydrater": "^3.1.7",
     "sitemap-webpack-plugin": "^0.8.1",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
@@ -65,6 +64,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.1.3",
+    "graphql": "^15.3.0",
     "history": "^5.0.0",
     "i18next": "^19.6.2",
     "react": "^16.13.1",

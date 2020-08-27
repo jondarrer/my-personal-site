@@ -1,0 +1,30 @@
+schema {
+  query: Query
+}
+
+type PostInfo {
+  id: ID!
+  title: String
+  description: String
+  author: String
+  datePosted: String
+  tags: String
+  picture: String
+  language: String
+  fileName: String
+  markdown: String
+}
+
+enum AscDescOrder {
+  asc
+  desc
+}
+
+enum Language {
+  en
+  ro
+}
+
+type Query {
+  getPosts(language: Language!, dateOrder: AscDescOrder): [PostInfo]
+}
