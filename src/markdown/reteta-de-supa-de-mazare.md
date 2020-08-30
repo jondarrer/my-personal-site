@@ -1,6 +1,6 @@
 # Reteta de supă de mazare
 
-![Bol de supă de mazare](/images/IMG_1078_LOWRES.jpg)
+![Bol de supă de mazare](/images/IMG_1126.jpg)
 
 ## Ingrediente
 
