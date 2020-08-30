@@ -6,15 +6,15 @@
 
 8-10 servings
 
-* Peas - [725g petits pois](https://www.waitrose.com/ecom/products/essential-waitrose-petits-pois/054027-27091-27092)
-* Onions - [4 large or 6 medium](https://www.waitrose.com/ecom/products/essential-onions/085115-43203-43204)
+* [Peas - 725g petits pois](https://www.waitrose.com/ecom/products/essential-waitrose-petits-pois/054027-27091-27092)
+* [Onions - 4 large or 6 medium](https://www.waitrose.com/ecom/products/essential-onions/085115-43203-43204)
 * Oil - 4 tablespoons
-* Bacon [Optional] - [300g smoked back rashers](https://www.waitrose.com/ecom/products/essential-smoked-british-bacon-10-rashers/428265-142206-142207)
+* [Bacon (Optional) - 300g smoked back rashers](https://www.waitrose.com/ecom/products/essential-smoked-british-bacon-10-rashers/428265-142206-142207)
 * Water - 1.5 litres
-* Bouillon - [4 teaspoons](https://www.waitrose.com/ecom/products/marigold-swiss-vegetable-bouillon-powder/024252-11774-11775)
-* Fresh mint - [a sprig](https://www.waitrose.com/ecom/products/cooks-ingredients-mint/086106-43929-43930)
+* [Bouillon - 4 teaspoons](https://www.waitrose.com/ecom/products/marigold-swiss-vegetable-bouillon-powder/024252-11774-11775)
+* [Fresh mint - a sprig](https://www.waitrose.com/ecom/products/cooks-ingredients-mint/086106-43929-43930)
 * Salt & Pepper - to taste
-* Sour Cream - [to serve](https://www.waitrose.com/ecom/products/essential-waitrose-soured-cream/026556-12933-12934)
+* [Sour Cream - to serve](https://www.waitrose.com/ecom/products/essential-waitrose-soured-cream/026556-12933-12934)
 
 ## Directions
 
