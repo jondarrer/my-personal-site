@@ -22,7 +22,7 @@
 2. Heat the oil in a large (4+ litre) pot, add the diced onions and saute until soft, but do not brown
 3. Add all the peas, and then add the water together with the bouillon and mint leaves
 4. Bring to the boil, and then simmer for 5 mins
-5. [Optional] While things are simmering, finely dice the bacon, and add it in and
+5. (Optional) While things are simmering, finely dice the bacon, and add it in and
 6. Simmer for a further 10 mins
 7. Add salt and pepper to taste
 8. Blend (in batches) in a food blender, or in the pan with a hand blender
