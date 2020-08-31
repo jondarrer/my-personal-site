@@ -6,8 +6,17 @@ import post1 from '../../markdown/post-1.md';
 import post2 from '../../markdown/post-2.md';
 import peaSoupRecipe from '../../markdown/pea-soup-recipe.md';
 import retetaDeSupaDeMazare from '../../markdown/reteta-de-supa-de-mazare.md';
+import coconutFlourChocolateMuffin from '../../markdown/coconut-flour-chocolate-muffin.md';
+import muffinDeCiocolataCuFainaDeCocos from '../../markdown/muffin-de-ciocolata-cu-faina-de-cocos.md';
 
-const posts = { post1, post2, peaSoupRecipe, retetaDeSupaDeMazare };
+const posts = {
+  post1,
+  post2,
+  peaSoupRecipe,
+  retetaDeSupaDeMazare,
+  coconutFlourChocolateMuffin,
+  muffinDeCiocolataCuFainaDeCocos,
+};
 
 /**
  * @typedef {import('../../models').PostInfo} PostInfo

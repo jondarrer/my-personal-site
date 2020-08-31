@@ -19,6 +19,8 @@ const posts = {
   post2: 'post-2',
   peaSoupRecipe: 'pea-soup-recipe',
   retetaDeSupaDeMazare: 'reteta-de-supa-de-mazare',
+  coconutFlourChocolateMuffin: 'coconut-flour-chocolate-muffin',
+  muffinDeCiocolataCuFainaDeCocos: 'muffin-de-ciocolata-cu-faina-de-cocos',
 };
 let postInfos;
 
@@ -58,7 +60,7 @@ export const typeDefs = gql`
 export const resolvers = {
   Query: {
     getPosts: async (_a, { language, dateOrder }, _context) => {
-      console.log('query#getPosts', { language, dateOrder });
+      // console.log('query#getPosts', { language, dateOrder });
       if (!postInfos) {
         postInfos = {};
         // i18n.then((t) =>
@@ -78,7 +80,7 @@ export const resolvers = {
           postInfos[key] = res;
         });
       }
-      console.log('query#getPosts', { postInfos });
+      // console.log('query#getPosts', { postInfos });
       const filtered = filterPostsByLanguage(postInfos, language);
       return orderPostsByDate(filtered, dateOrder);
     },

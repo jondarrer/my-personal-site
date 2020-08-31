@@ -36,11 +36,11 @@ const GET_POSTS = gql`
 const HomePage = ({ locales }) => {
   const { currentLanguage: lng } = useLanguage();
   const { t } = useTranslation();
-  const { loading, error, data } = useQuery(GET_POSTS, {
+  const { data } = useQuery(GET_POSTS, {
     variables: { language: lng },
   });
 
-  console.log('HomePage', { loading, error, data });
+  // console.log('HomePage', { loading, error, data });
 
   return (
     <>
