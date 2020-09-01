@@ -82,8 +82,8 @@ export default {
       fontSize: '3',
     },
     heading: {
-      mt: 2,
-      mb: 1,
+      mt: '1em',
+      mb: '0.5em',
     },
   },
   styles: {
