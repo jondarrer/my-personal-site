@@ -35,6 +35,7 @@ export default {
   },
   links: {
     header: {
+      cursor: 'pointer',
       fontSize: '3',
       fontWeight: 'header',
       color: 'chromeText',
@@ -80,8 +81,15 @@ export default {
     icon: {
       fontSize: '3',
     },
+    heading: {
+      mt: 2,
+      mb: 1,
+    },
   },
   styles: {
+    a: {
+      color: 'text',
+    },
     root: {
       // uses the theme values provided above
       fontFamily: 'body',

@@ -89,7 +89,7 @@ const Navbar = ({ variant }) => {
             </MenuLink>
           ))}
         </Box>
-        <Box sx={{ display: 'inline-block' }} mr="2">
+        <Box sx={{ display: 'inline-block' }} mr="2" ml="2">
           <LanguageSwitcher variant={variant} />
         </Box>
         <ColourModeSwitcher
