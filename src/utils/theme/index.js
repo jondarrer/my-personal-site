@@ -9,6 +9,7 @@ export default {
     chromeMenu: '#b8b8b8',
     chromeText: '#fff',
     primary: '#33e',
+    imageBorder: 'rgba(0, 0, 0, 0.125)',
     modes: {
       dark: {
         text: '#fff',
@@ -17,7 +18,16 @@ export default {
         chromeMenu: '#b8b8b8',
         chromeText: '#b8b8b8',
         primary: '#0cf',
+        imageBorder: 'rgba(255, 255, 255, 0.825)',
       },
+    },
+  },
+  cards: {
+    primary: {
+      padding: 2,
+      borderRadius: 4,
+      boxShadow:
+        '0 0 8px var(--theme-ui-colors-imageBorder, rgba(0, 0, 0, 0.125))',
     },
   },
   fonts: {
@@ -32,6 +42,17 @@ export default {
     footer: 400,
     heading: 600,
     bold: 700,
+  },
+  images: {
+    blogPost: {
+      display: 'block',
+    },
+  },
+  layout: {
+    blogPost: {
+      boxShadow: '0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5',
+      mb: 3,
+    },
   },
   links: {
     header: {
@@ -84,6 +105,9 @@ export default {
     heading: {
       mt: '1em',
       mb: '0.5em',
+    },
+    blogPost: {
+      p: '1em',
     },
   },
   styles: {

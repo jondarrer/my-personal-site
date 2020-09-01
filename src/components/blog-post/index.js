@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Image, Text, Link } from 'theme-ui';
+import { Card, Heading, Image, Link, Text } from 'theme-ui';
 import ReactMarkdown from 'react-markdown';
 
 /**
@@ -24,7 +24,10 @@ const BlogPost = ({ postInfo }) => {
           ),
           paragraph: ({ children }) => <Text as="p">{children}</Text>,
           image: ({ children: _, ...props }) => (
-            <Image alt={props.alt} src={props.src} />
+            <Card>
+              <Image alt={props.alt} src={props.src} />
+              <Text>{props.alt}</Text>
+            </Card>
           ),
           text: ({ children }) => <Text>{children}</Text>,
           link: ({ children, ...props }) => <Link {...props}>{children}</Link>,
