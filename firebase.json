@@ -20,6 +20,10 @@
         "destination": "/__ro_blog_reteta-de-supa-de-mazare.html"
       },
       {
+        "source": "/ro/blog/muffin-de-ciocolata-cu-faina-de-cocos",
+        "destination": "/__ro_blog_muffin-de-ciocolata-cu-faina-de-cocos.html"
+      },
+      {
         "source": "/blog",
         "destination": "/__blog.html"
       },
@@ -30,6 +34,10 @@
       {
         "source": "/blog/pea-soup-recipe",
         "destination": "/__blog_pea-soup-recipe.html"
+      },
+      {
+        "source": "/blog/coconut-flour-chocolate-muffin",
+        "destination": "/__blog_coconut-flour-chocolate-muffin.html"
       },
       {
         "source": "!/@(js|css|jpg|png|txt)/**",
