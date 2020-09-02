@@ -10,6 +10,7 @@ export default {
     chromeText: '#fff',
     primary: '#33e',
     imageBorder: 'rgba(0, 0, 0, 0.125)',
+    imageBackground: 'transparent',
     modes: {
       dark: {
         text: '#fff',
@@ -19,6 +20,7 @@ export default {
         chromeText: '#b8b8b8',
         primary: '#0cf',
         imageBorder: 'rgba(255, 255, 255, 0.825)',
+        imageBackground: 'rgba(255, 255, 255, 0.125)',
       },
     },
   },
@@ -26,6 +28,7 @@ export default {
     primary: {
       padding: 2,
       borderRadius: 4,
+      backgroundColor: 'imageBackground',
       boxShadow:
         '0 0 8px var(--theme-ui-colors-imageBorder, rgba(0, 0, 0, 0.125))',
     },
