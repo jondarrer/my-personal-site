@@ -24,7 +24,7 @@ const BlogPost = ({ postInfo }) => {
           ),
           paragraph: ({ children }) => <Text as="p">{children}</Text>,
           image: ({ children: _, ...props }) => (
-            <Card>
+            <Card mb={3}>
               <Image alt={props.alt} src={props.src} />
               <Text>{props.alt}</Text>
             </Card>

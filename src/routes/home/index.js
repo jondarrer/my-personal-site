@@ -2,29 +2,13 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Box, Container, Flex, Grid, Heading, Image, Link } from 'theme-ui';
 import { useTranslation } from 'react-i18next';
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 
 import { Meta } from '../../components';
 import { useLanguage } from '../../contexts';
+import { GET_POSTS } from '../../graphql/shared-queries';
 
 import portrait from '../../images/jondarrer-soften-portrait.jpg';
-
-const GET_POSTS = gql`
-  query GetPosts($language: Language!, $dateOrder: AscDescOrder) {
-    getPosts(language: $language, dateOrder: $dateOrder) @client {
-      id
-      title
-      description
-      author
-      datePosted
-      tags
-      picture
-      language
-      fileName
-      markdown
-    }
-  }
-`;
 
 /**
  * Props for the HomePage type

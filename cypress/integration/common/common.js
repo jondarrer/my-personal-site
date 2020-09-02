@@ -21,6 +21,9 @@ Given('I open {string} page in {string}', (pageName, language) => {
     case 'BlogPost2':
       path += 'blog/post-2';
       break;
+    case 'Blog':
+      path += 'blog';
+      break;
     default:
       break;
   }

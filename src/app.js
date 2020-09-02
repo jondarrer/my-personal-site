@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'theme-ui';
 
-import { HomePage, BlogPostPage } from './routes';
+import { HomePage, BlogPage, BlogPostPage } from './routes';
 import { Layout } from './components';
 import { LanguageContext } from './contexts';
 import { theme, i18n as _i18n } from './utils';
@@ -23,6 +23,15 @@ const App = () => (
           </Layout>
         </LanguageContext.Provider>
       </Route>
+      <Route path="/blog" exact>
+        <LanguageContext.Provider
+          value={{ currentLanguage: 'en', availableLanguages }}
+        >
+          <Layout>
+            <BlogPage locales={locales} />
+          </Layout>
+        </LanguageContext.Provider>
+      </Route>
       <Route path="/blog/:postId">
         <LanguageContext.Provider
           value={{ currentLanguage: 'en', availableLanguages }}
@@ -40,6 +49,9 @@ const App = () => (
             <Switch>
               <Route path="/ro" exact>
                 <HomePage locales={locales} />
+              </Route>
+              <Route path="/ro/blog" exact>
+                <BlogPage locales={locales} />
               </Route>
               <Route path="/ro/blog/:postId">
                 <BlogPostPage locales={locales} />
