@@ -7,12 +7,9 @@ import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { resolve } from 'path';
 
-import resources from './src/utils/i18n/resources.json';
-const {
-  en: { routes: enRoutes },
-} = resources;
 import App from './src/app';
 import { client } from './src/client';
+import { getRoutes } from './src/utils';
 
 const pad = (n, width, z) => {
   const z1 = z || '0';
@@ -30,10 +27,10 @@ const lastmod = `${pad(today.getFullYear(), 2)}-${pad(
 const priority = '0.8';
 const changefreq = 'daily';
 const paths = [];
-const routes = Object.keys(enRoutes);
-routes.forEach((route) => {
+const routes = getRoutes();
+routes.forEach((path) => {
   paths.push({
-    path: route,
+    path,
     lastmod,
     priority,
     changefreq,
