@@ -6,7 +6,7 @@ import { ApolloProvider } from '@apollo/client';
 
 import App from './app';
 
-import { client } from './client';
+import { client } from './graphql/client';
 
 hydrate(
   <ApolloProvider client={client}>

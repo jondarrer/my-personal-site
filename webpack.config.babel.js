@@ -8,7 +8,7 @@ import CopyPlugin from 'copy-webpack-plugin';
 import { resolve } from 'path';
 
 import App from './src/app';
-import { client } from './src/client';
+import { client } from './src/graphql/client';
 import { getRoutes } from './src/utils';
 
 const pad = (n, width, z) => {

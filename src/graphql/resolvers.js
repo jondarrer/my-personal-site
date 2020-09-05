@@ -7,7 +7,7 @@ import {
   getPostInfo,
   filterPostsByLanguage,
   orderPostsByDate,
-} from './utils';
+} from '../utils';
 
 // import post1 from './markdown/post-1.md';
 // import post2 from './markdown/post-2.md';
