@@ -1,28 +1,13 @@
 import { gql } from '@apollo/client';
 // import schema from '../schema.graphql';
 
-// import { getPostInfo, filterPostsByLanguage, orderPostsByDate } from './utils';
 import {
   i18n,
   getPostInfo,
+  getRoutes,
   filterPostsByLanguage,
   orderPostsByDate,
 } from '../utils';
-
-// import post1 from './markdown/post-1.md';
-// import post2 from './markdown/post-2.md';
-// import peaSoupRecipe from './markdown/pea-soup-recipe.md';
-// import retetaDeSupaDeMazare from './markdown/reteta-de-supa-de-mazare.md';
-
-const posts = {
-  post1: 'post-1',
-  post2: 'post-2',
-  peaSoupRecipe: 'pea-soup-recipe',
-  retetaDeSupaDeMazare: 'reteta-de-supa-de-mazare',
-  coconutFlourChocolateMuffin: 'coconut-flour-chocolate-muffin',
-  muffinDeCiocolataCuFainaDeCocos: 'muffin-de-ciocolata-cu-faina-de-cocos',
-};
-let postInfos;
 
 export const typeDefs = gql`
   schema {
@@ -57,16 +42,24 @@ export const typeDefs = gql`
   }
 `;
 
+let postInfos;
+
 export const resolvers = {
   Query: {
     getPosts: async (_a, { language, dateOrder }, _context) => {
       if (!postInfos) {
         postInfos = {};
         const t = await i18n;
-        Object.keys(posts).forEach((key) => {
-          const res = getPostInfo(posts[key], language, t);
-          postInfos[key] = res;
-        });
+        getRoutes()
+          .filter(
+            (route) =>
+              route.startsWith('/blog/') || route.startsWith('/ro/blog/')
+          )
+          .forEach((route) => {
+            const postId = route.substr(route.lastIndexOf('/') + 1);
+            const res = getPostInfo(postId, language, t);
+            postInfos[postId] = res;
+          });
       }
       const filtered = filterPostsByLanguage(postInfos, language);
       return orderPostsByDate(filtered, dateOrder);
