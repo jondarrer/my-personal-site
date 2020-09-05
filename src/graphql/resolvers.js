@@ -39,6 +39,7 @@ export const typeDefs = gql`
 
   type Query {
     getPosts(language: Language!, dateOrder: AscDescOrder): [PostInfo]
+    getPost(language: Language!, postId: String): PostInfo
   }
 `;
 
@@ -63,6 +64,10 @@ export const resolvers = {
       }
       const filtered = filterPostsByLanguage(postInfos, language);
       return orderPostsByDate(filtered, dateOrder);
+    },
+    getPost: async (_a, { language, postId }, _context) => {
+      const t = await i18n;
+      return getPostInfo(postId, language, t);
     },
   },
 };

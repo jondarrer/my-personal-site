@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Flex } from 'theme-ui';
 import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
 
+import { useLanguage } from '../../contexts';
 import { BlogPost, Meta } from '../../components';
-import { getPostInfo } from '../../utils';
+import { GET_POST } from '../../graphql/shared-queries';
 
 /**
  * Props for the BlogPostPage type
@@ -14,7 +16,16 @@ import { getPostInfo } from '../../utils';
 
 const BlogPostPage = ({ locales }) => {
   const { postId } = useParams();
-  const postInfo = getPostInfo(postId);
+  const { currentLanguage: lng } = useLanguage();
+  const { data } = useQuery(GET_POST, {
+    variables: { language: lng, postId },
+  });
+
+  if (!data) {
+    return null;
+  }
+
+  const { getPost: postInfo } = data;
 
   return (
     <>

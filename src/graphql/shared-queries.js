@@ -16,3 +16,20 @@ export const GET_POSTS = gql`
     }
   }
 `;
+
+export const GET_POST = gql`
+  query GetPosts($language: Language!, $postId: String) {
+    getPost(language: $language, postId: $postId) @client {
+      id
+      title
+      description
+      author
+      datePosted
+      tags
+      picture
+      language
+      fileName
+      markdown
+    }
+  }
+`;
