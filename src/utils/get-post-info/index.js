@@ -2,21 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../contexts';
 
-import post1 from '../../markdown/post-1.md';
-import post2 from '../../markdown/post-2.md';
-import peaSoupRecipe from '../../markdown/pea-soup-recipe.md';
-import retetaDeSupaDeMazare from '../../markdown/reteta-de-supa-de-mazare.md';
-import coconutFlourChocolateMuffin from '../../markdown/coconut-flour-chocolate-muffin.md';
-import muffinDeCiocolataCuFainaDeCocos from '../../markdown/muffin-de-ciocolata-cu-faina-de-cocos.md';
-
-const posts = {
-  post1,
-  post2,
-  peaSoupRecipe,
-  retetaDeSupaDeMazare,
-  coconutFlourChocolateMuffin,
-  muffinDeCiocolataCuFainaDeCocos,
-};
+import markdowns from '../../markdown';
 
 /**
  * @typedef {import('../../models').PostInfo} PostInfo
@@ -43,13 +29,7 @@ const getPostInfo = (postId, language, translation) => {
     t = trans;
   }
 
-  /* eslint-disable require-unicode-regexp  */
-  /* eslint-disable prefer-named-capture-group */
-  const fileName = postId?.replace(/-([a-z0-9])/g, (g) => {
-    return g[1].toUpperCase();
-  });
-
-  if (!posts.hasOwnProperty(fileName)) {
+  if (!markdowns.hasOwnProperty(postId)) {
     throw new Error(`Unable to find post "${postId}"`);
   }
 
@@ -66,8 +46,8 @@ const getPostInfo = (postId, language, translation) => {
     tags: t(`blog-posts:${postId}-tags`, { lng }),
     picture: t(`blog-posts:${postId}-picture`, { lng }),
     language: t(`blog-posts:${postId}-language`, { lng }),
-    fileName,
-    markdown: posts[fileName],
+    fileName: postId,
+    markdown: markdowns[postId],
   };
 };
 

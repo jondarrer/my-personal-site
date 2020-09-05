@@ -17,13 +17,9 @@ jest.mock('../../contexts', () => {
   };
 });
 
-// @TODO Fix this hack, so the file can be mocked
-import post1 from '../../markdown/post-1.md';
-const mockBlogPostMarkdown = post1;
-// const mockBlogPostMarkdown = '# This is a mock blog post';
-// jest.mock('../../markdown/post-1.md', () => {
-//   return mockBlogPostMarkdown;
-// });
+jest.mock('../../markdown', () => {
+  return { 'post-1': '# This is a mock blog post' };
+});
 
 // The component to test
 import getPostInfo from './';
@@ -79,8 +75,8 @@ describe('utils/getPostInfo', () => {
       tags,
       picture,
       language,
-      fileName: 'post1',
-      markdown: mockBlogPostMarkdown,
+      fileName: postId,
+      markdown: '# This is a mock blog post',
     });
   });
   it('should error for an invalid post', async () => {
