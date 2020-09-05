@@ -4,6 +4,7 @@ import peaSoupRecipe from './pea-soup-recipe.md';
 import retetaDeSupaDeMazare from './reteta-de-supa-de-mazare.md';
 import coconutFlourChocolateMuffin from './coconut-flour-chocolate-muffin.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
+import learningOAuth2AndOIDC from './learning-oauth-2-and-oidc.md';
 
 export default {
   'post-1': post1,
@@ -12,4 +13,5 @@ export default {
   'reteta-de-supa-de-mazare': retetaDeSupaDeMazare,
   'coconut-flour-chocolate-muffin': coconutFlourChocolateMuffin,
   'muffin-de-ciocolata-cu-faina-de-cocos': muffinDeCiocolataCuFainaDeCocos,
+  'learning-oauth-2-and-oidc': learningOAuth2AndOIDC,
 };
