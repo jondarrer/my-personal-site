@@ -68,8 +68,7 @@ export default {
     new ReactStaticSiteHydrater({
       routes,
       component: App,
-      baseFilename: 'default.html',
-      plugins: ['react-router', 'helmet', ['apollo', { client }]],
+      plugins: ['react-router', 'helmet', ['apollo', { client }], 'firebase'],
     }),
     new CopyPlugin({
       patterns: [
