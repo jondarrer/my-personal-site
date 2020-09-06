@@ -1,5 +1,14 @@
 /* eslint-env node */
 module.exports = (plop) => {
+  // eslint-disable-next-line space-before-function-paren
+  plop.setHelper('if_eq', function ifEq(a, b, opts) {
+    if (a === b) {
+      // eslint-disable-next-line no-invalid-this
+      return opts.fn(this);
+    }
+    // eslint-disable-next-line no-invalid-this
+    return opts.inverse(this);
+  });
   plop.setGenerator('blog-post', {
     description: 'Creating a new blog post',
     prompts: [
