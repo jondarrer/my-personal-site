@@ -34,6 +34,12 @@ module.exports = (plop) => {
         message: 'Picture url (e.g. /images/123.jpg)',
       },
     ],
-    actions: [],
+    actions: [
+      {
+        type: 'add',
+        path: 'src/markdown/{{kebabCase title}}.md',
+        templateFile: 'plop-templates/blog-post-file.hbs',
+      },
+    ],
   });
 };
