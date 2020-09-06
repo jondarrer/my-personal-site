@@ -6,6 +6,7 @@
   "scripts": {
     "analyzer": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
     "build": "webpack",
+    "plop": "plop",
     "prepare": "npm run build",
     "start": "webpack-dev-server --open",
     "prestart:fb": "npm run build",
