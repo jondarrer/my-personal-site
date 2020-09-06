@@ -1,6 +1,14 @@
+/* eslint-disable space-before-function-paren */
 /* eslint-env node */
 module.exports = (plop) => {
-  // eslint-disable-next-line space-before-function-paren
+  // eslint-disable-next-line prefer-arrow-callback
+  plop.setHelper('dateNow', function dateNow() {
+    const now = new Date();
+    const year = now.getFullYear().toString();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  });
   plop.setHelper('if_eq', function ifEq(a, b, opts) {
     if (a === b) {
       // eslint-disable-next-line no-invalid-this
