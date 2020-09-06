@@ -37,8 +37,21 @@ module.exports = (plop) => {
     actions: [
       {
         type: 'add',
-        path: 'src/markdown/{{kebabCase title}}.md',
-        templateFile: 'plop-templates/blog-post-file.hbs',
+        path: './src/markdown/{{kebabCase title}}.md',
+        templateFile: './plop-templates/blog-post-file.hbs',
+      },
+      {
+        type: 'modify',
+        path: './src/markdown/index.js',
+        pattern: /^/u, // The start of the file
+        template:
+          "import {{camelCase title}} from './{{kebabCase title}}.md';\n",
+      },
+      {
+        type: 'modify',
+        path: './src/markdown/index.js',
+        pattern: /(?<=export default \{)/u, // The start of the file
+        template: "\n  '{{kebabCase title}}': {{camelCase title}},",
       },
     ],
   });
