@@ -49,7 +49,7 @@ const HomePage = ({ locales }) => {
                       as={RouterLink}
                       to={`${lng === 'ro' ? '/ro' : ''}/blog/${post.id}`}
                     >
-                      {post.description}
+                      {post.title}
                     </Link>
                   </Heading>
                 ))}

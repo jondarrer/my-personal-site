@@ -64,7 +64,7 @@ const BlogPage = ({ locales }) => {
                   )}
                   <Box>
                     <Heading as="h2" mt={[0, null, 4]}>
-                      {post.description}
+                      {post.title}
                     </Heading>
                     <Text as="p" mb={2}>
                       {post.datePosted}
