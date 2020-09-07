@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/automating-repetitive-software-tasks-using-plop": "/blog/automating-repetitive-software-tasks-using-plop",
       "/": "/",
       "/ro": "/",
       "/blog": "/blog",
@@ -41,6 +42,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "automating-repetitive-software-tasks-using-plop-title": "Automating repetitive software tasks using plop",
+      "automating-repetitive-software-tasks-using-plop-description": "Repeating the same thing over and over again, copy and pasting, converting text from kebab-case to camel-case may indicate a task suitable for automation. I integrated plop into my node project to help me with such a task, adding a new blog post, and here I describe my journey.",
+      "automating-repetitive-software-tasks-using-plop-author": "Jonathan Darrer",
+      "automating-repetitive-software-tasks-using-plop-date-posted": "2020-09-07",
+      "automating-repetitive-software-tasks-using-plop-tags": "software,automation",
+      "automating-repetitive-software-tasks-using-plop-picture": "software,automation",
+      "automating-repetitive-software-tasks-using-plop-language": "en",
       "post-1-title": "Blog Post 1",
       "post-1-description": "This is a test blog post in English",
       "post-1-author": "Jonathan Darrer",
@@ -117,6 +125,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/automating-repetitive-software-tasks-using-plop": "/blog/automating-repetitive-software-tasks-using-plop",
       "/": "/ro",
       "/ro": "/ro",
       "/blog": "/ro/blog",
@@ -133,6 +142,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "automating-repetitive-software-tasks-using-plop-title": "Automating repetitive software tasks using plop",
+      "automating-repetitive-software-tasks-using-plop-description": "Repeating the same thing over and over again, copy and pasting, converting text from kebab-case to camel-case may indicate a task suitable for automation. I integrated plop into my node project to help me with such a task, adding a new blog post, and here I describe my journey.",
+      "automating-repetitive-software-tasks-using-plop-author": "Jonathan Darrer",
+      "automating-repetitive-software-tasks-using-plop-date-posted": "2020-09-07",
+      "automating-repetitive-software-tasks-using-plop-tags": "software,automation",
+      "automating-repetitive-software-tasks-using-plop-picture": "software,automation",
+      "automating-repetitive-software-tasks-using-plop-language": "en",
       "post-1-title": "Blog Post 1",
       "post-1-description": "This is a test blog post in English",
       "post-1-author": "Jonathan Darrer",

@@ -1,3 +1,4 @@
+import automatingRepetitiveSoftwareTasksUsingPlop from './automating-repetitive-software-tasks-using-plop.md';
 import post1 from './post-1.md';
 import post2 from './post-2.md';
 import peaSoupRecipe from './pea-soup-recipe.md';
@@ -7,6 +8,7 @@ import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-c
 import learningOAuth2AndOIDC from './learning-oauth-2-and-oidc.md';
 
 export default {
+  'automating-repetitive-software-tasks-using-plop': automatingRepetitiveSoftwareTasksUsingPlop,
   'post-1': post1,
   'post-2': post2,
   'pea-soup-recipe': peaSoupRecipe,
