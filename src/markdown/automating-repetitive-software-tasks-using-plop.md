@@ -39,8 +39,8 @@ hadn't seen it).
 
 ```json
 {
-  “scripts”: {
-    “plop”: “plop”
+  "scripts": {
+    "plop": "plop"
   }
 }
 ```
@@ -214,11 +214,11 @@ wasn't obvious, and I hadn't read through things very carefully!):
 With this in hand, I have the following action in my plopfile:
 
 ```js
-      {
-        type: 'add',
-        path: './src/markdown/{{kebabCase title}}.md',
-        templateFile: ‘./plop-templates/blog-post-file.hbs',
-      },
+{
+  type: 'add',
+  path: './src/markdown/{{kebabCase title}}.md',
+  templateFile: './plop-templates/blog-post-file.hbs',
+},
 ```
 
 Having already written the template, I run plop; the file is created and things
@@ -244,20 +244,42 @@ I find that the files I need to edit are the following two:
 
 I tried searching the README for _update_, _insert_ and _add_, but nothing.
 Finally, _[Modify](https://github.com/plopjs/plop#modify)_ turns out to be what
-I want. It's similar to add, but with pattern to help locate the text within the
-file to modify.
+I want. It's similar to add, but with the `pattern` option to help locate the
+text within the file to modify.
 
-I want to do a couple of things:
+I want to do a couple of things, and I'll need regexs for them:
 
-- Regex to find start of file
-- Regex to find end of a piece of text
+- Find start of file
+- Find end of a piece of text
 
-I can write some inline, but others need the template file.
+A regex for the start of a file is super easy in JavaScript, simply:
+
+```js
+/^/u;
+```
+
+I put this into [https://regex101.com/](https://regex101.com/) to check it
+works, and then write my first modify action, with an inline template:
+
+```js
+{
+  type: 'modify',
+  path: './src/markdown/index.js',
+  pattern: /^/u, // The start of the file
+  template:
+    "import {{camelCase title}} from './{{kebabCase title}}.md';\n",
+},
+```
+
+I'm not done with this file, and need to modify it a little further down, after
+the text `export default {`.
+
+I can write some templates inline, using but others need the template file.
 
 I’m going to need to add these to both en and ro! My regex needs to be specific
 for each language routes/blog-posts section
 
-Trial and error to fix non-capturing groups which aslant threw up (?:
+Trial and error to fix non-capturing groups which eslint threw up (?:
 
 Tried prettier config, no joy.
 
@@ -267,8 +289,8 @@ want spaces and new lines - they’re fragments of code)
 https://stackoverflow.com/questions/44831313/how-to-exclude-files-from-format-on-save-in-vscode
 
 ```json
-“[handlebars]”: {
-    "editor.formatOnSave": false
+"[handlebars]": {
+  "editor.formatOnSave": false
 }
 ```
 
@@ -292,12 +314,12 @@ https://github.com/prettier/eslint-config-prettier#installation. I configured my
 eslint extends as:
 
 ```json
-  "extends": [
-    "eslint:recommended", — already
-    "plugin:react/recommended", — already
-    "prettier",
-    "prettier/react"
-  ],
+"extends": [
+  "eslint:recommended", — already
+  "plugin:react/recommended", — already
+  "prettier",
+  "prettier/react"
+],
 ```
 
 https://github.com/prettier/prettier-vscode/issues/318
