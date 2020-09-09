@@ -36,7 +36,7 @@ export default {
   fonts: {
     body: '"Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: '"Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    monospace: 'Menlo, monospace',
+    monospace: '"Consolas,Monaco,Andale Mono,Menlo,monospace"',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
@@ -102,6 +102,9 @@ export default {
     },
   },
   text: {
+    default: {
+      lineHeight: '1.625rem',
+    },
     icon: {
       fontSize: '3',
     },
@@ -129,6 +132,10 @@ export default {
     footer: {
       backgroundColor: 'chrome',
       color: 'chromeText',
+    },
+    code: {
+      backgroundColor: 'gray',
+      fontFamily: '"Consolas,Monaco,Andale Mono,Menlo,monospace"',
     },
   },
 };

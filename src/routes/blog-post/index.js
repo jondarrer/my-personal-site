@@ -38,7 +38,7 @@ const BlogPostPage = ({ locales }) => {
       />
       <Flex>
         <Container
-          sx={{ maxWidth: '1224px' }}
+          sx={{ maxWidth: '640px' }}
           px={['2', null, '3', '4']}
           py={['1', null, '2']}
         >
