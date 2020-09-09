@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Heading, Image, Link, Text } from 'theme-ui';
+import { Card, Heading, Image, Link, Text, useThemeUI } from 'theme-ui';
 import ReactMarkdown from 'react-markdown';
 
 /**
@@ -14,6 +14,13 @@ import ReactMarkdown from 'react-markdown';
  */
 
 const BlogPost = ({ postInfo }) => {
+  const { colorMode } = useThemeUI();
+  let codeBgColour = '#eee';
+
+  if (colorMode === 'dark') {
+    codeBgColour = '#222';
+  }
+
   return (
     <>
       <ReactMarkdown
@@ -42,7 +49,7 @@ const BlogPost = ({ postInfo }) => {
           code: ({ language, value }) => (
             <pre
               style={{
-                backgroundColor: '#eee',
+                backgroundColor: codeBgColour,
                 padding: '0.5em',
                 overflowX: 'scroll',
               }}
@@ -61,7 +68,7 @@ const BlogPost = ({ postInfo }) => {
           inlineCode: ({ children }) => (
             <code
               style={{
-                backgroundColor: '#eee',
+                backgroundColor: codeBgColour,
                 fontFamily: 'Consolas,Monaco,"Andale Mono",Menlo,monospace',
                 fontSize: '16px',
                 padding: '0.25em',
