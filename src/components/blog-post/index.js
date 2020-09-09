@@ -22,15 +22,54 @@ const BlogPost = ({ postInfo }) => {
           heading: ({ children, ...props }) => (
             <Heading as={`h${props.level}`}>{children}</Heading>
           ),
-          paragraph: ({ children }) => <Text as="p">{children}</Text>,
+          paragraph: ({ children }) => (
+            <Text as="p" variant="text.default">
+              {children}
+            </Text>
+          ),
           image: ({ children: _, ...props }) => (
             <Card mb={3}>
               <Image alt={props.alt} src={props.src} />
-              <Text>{props.alt}</Text>
+              <Text variant="text.default">{props.alt}</Text>
             </Card>
           ),
-          text: ({ children }) => <Text>{children}</Text>,
+          text: ({ children }) => (
+            <Text sx={{ display: 'inline' }} variant="text.default">
+              {children}
+            </Text>
+          ),
           link: ({ children, ...props }) => <Link {...props}>{children}</Link>,
+          code: ({ language, value }) => (
+            <pre
+              style={{
+                backgroundColor: '#eee',
+                padding: '0.5em',
+                overflowX: 'scroll',
+              }}
+            >
+              <code
+                className={`language-${language}`}
+                style={{
+                  fontFamily: 'Consolas,Monaco,"Andale Mono",Menlo,monospace',
+                  fontSize: '16px',
+                }}
+              >
+                {value}
+              </code>
+            </pre>
+          ),
+          inlineCode: ({ children }) => (
+            <code
+              style={{
+                backgroundColor: '#eee',
+                fontFamily: 'Consolas,Monaco,"Andale Mono",Menlo,monospace',
+                fontSize: '16px',
+                padding: '0.25em',
+              }}
+            >
+              {children}
+            </code>
+          ),
         }}
       />
     </>
