@@ -417,9 +417,11 @@ I hit a snag, and get an error:
 if_eq doesn't match if - 2:10
 ```
 
-Which I discovered meant I had coded {{#eq_if}}{{/if}}! I didn’t work it out
+Which I discovered meant I had coded `{{#eq_if}}{{/if}}`! I didn’t work it out
 immediately though. Perhaps saying that {{/if}} didn’t match the opening
 {{#if_eq}} might have got me there sooner!
+
+#### Eslint and Prettier at war :(
 
 Now, I've got an eslint error _Missing space before function parentheses
 eslintspace-before-function-paren_.
@@ -471,6 +473,8 @@ And use this like so:
 ```hbs
 "{{kebabCase title}}-date-posted": "{{dateNow}}",
 ```
+
+## The end
 
 Done! I run `npm run plop` and scaffold up a new blog post - about
 [writing a post about software automation using plop](https://github.com/jondarrer/my-personal-site/commit/fbce0f3202bff71a9433c179bfe63e9d979daa09)!
