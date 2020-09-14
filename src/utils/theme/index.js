@@ -104,6 +104,8 @@ export default {
   text: {
     default: {
       lineHeight: '1.625rem',
+      marginTop: '1em',
+      marginBottom: '1em',
     },
     icon: {
       fontSize: '3',
