@@ -74,14 +74,12 @@ module.exports = (plop) => {
         type: 'modify',
         path: './src/utils/i18n/resources.json',
         pattern: /(?<="en":\s\{(?:(?:.|\n)*)"routes":\s\{)/u, // After "en": { "routes": {
-        data: { forLanguage: 'en' },
         templateFile: './plop-templates/i18n-resources-routes-snippet.hbs',
       },
       {
         type: 'modify',
         path: './src/utils/i18n/resources.json',
         pattern: /(?<="ro":\s\{(?:(?:.|\n)*)"routes":\s\{)/u, // After "ro": { "routes": {
-        data: { forLanguage: 'ro' },
         templateFile: './plop-templates/i18n-resources-routes-snippet.hbs',
       },
       {
