@@ -334,7 +334,7 @@ I turn back to using templates again. The trade off with templates will be that
 I will need a regex and will need to modify the file four times: once for each
 of the two sections and again for each of the two languages.
 
-My regexes will be to find the paths:
+My regexs will be to find the paths:
 
 - "en"->"routes"
 - "en"->"blog-posts"
@@ -408,7 +408,7 @@ would need it to be a function to take into consideration the user's input.
 
 After a few other dead ends, I search for a way to compare variable within a
 handlebars _if_, and find a blog post on adding a handlebars helper called
-`[if_eq](https://code-maven.com/handlebars-conditionals)`, which does an _if_
+[if_eq](https://code-maven.com/handlebars-conditionals), which does an _if_
 based on comparing two variables. I will then be able to do
 `{{#if_eq language 'ro'}}`.
 
@@ -440,8 +440,8 @@ Prettier kept removing the space between the function name and the opening
 parentheses, but eslint didn't like this.
 
 To try to fix the problem between eslint and prettier, I installed
-https://github.com/prettier/eslint-config-prettier#installation. I configured my
-eslint extends as:
+[https://github.com/prettier/eslint-config-prettier#installation](https://github.com/prettier/eslint-config-prettier#installation).
+I configured my eslint extends as:
 
 ```json
 "extends": [
