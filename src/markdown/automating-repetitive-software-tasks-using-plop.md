@@ -2,7 +2,7 @@
 
 ## Repeating the same thing over and over again, copying and pasting, converting text from kebab-case to camel-case, etc. may indicate a task suitable for automation. I integrated plop into my node project to help me with such a task, adding a new blog post, and here I describe my journey
 
-### The problem
+## The problem
 
 When adding a new blog post to my site (which I currently do through code) -
 although I have refined the process to be as quick and easy as possible - I end
@@ -13,7 +13,7 @@ and every time I create a blog post (twice actually, as I have two translations
 of each post, one in English and one in Romanian), this seemed to me like a task
 ripe for automation.
 
-### Automating with plop
+## Automating with plop
 
 [Plop](https://github.com/plopjs/plop) is a popular framework for automating
 tasks involving creating files based on templates and user input, using a
@@ -48,7 +48,7 @@ hadn't seen it).
 I got another error, so I added a basic `plopfile.js` to the root of my project,
 as per instructions:
 
-#### Basic plopfile
+### Basic plopfile
 
 ```js
 module.exports = (plop) => {
@@ -64,7 +64,7 @@ I purposely left prompts and actions empty, so I could fill them in myself.
 However, I was able to run plop without getting any errors (or any other
 messages!)
 
-### Prompts
+## Prompts
 
 I already remembered that prompts are the questions that get asked, and allow
 for the gathering of user input. (I'll address actions later.)
@@ -72,7 +72,7 @@ for the gathering of user input. (I'll address actions later.)
 I’ve boiled down the questions I want plop to ask, each time I want it to
 scaffold up a new blog post to these:
 
-#### The questions
+### The questions
 
 - Language
 - TItle
@@ -107,7 +107,7 @@ display the language in a more user-friendly way, while at the same time being
 able to get the language code for use in the actions. Also, **default** has to
 be the index of the item in the list to default to.
 
-#### My prompts
+### My prompts
 
 So, my prompts look like this:
 
@@ -157,7 +157,7 @@ summary once finished:
 ? Picture url (e.g. /images/123.jpg) /images/automation.jpg
 ```
 
-### Let's see some action
+## Let's see some action
 
 Now for the actions! This is where the results from the prompts are used to
 perform things like adding files based on the input, modifying existing files,
@@ -171,7 +171,7 @@ anyway.)
 I want to start with files that need to be created, as this seems the easiest
 thing, and the example already given in the README.
 
-#### Files to be created
+### Files to be created
 
 I come up with a list of files to be created, which ends up being pretty short,
 just the one file! It needs to be named dynamically, using the title from the
@@ -180,12 +180,12 @@ the title and description in the contents.
 
 `./src/markdown/{title-in-kebab-case}.md`
 
-##### Required input
+#### Required input
 
 - title (both kebab-case version and original)
 - description
 
-##### Template
+#### Template
 
 I create a template in the suggested folder `./plop-templates`:
 
@@ -197,7 +197,24 @@ I create a template in the suggested folder `./plop-templates`:
 ## {{description}}
 ```
 
-##### The action
+#### Stopping Prettier interfering with my template
+
+I noticed that my handlebars template was removing the first blank line when I
+saved the file. At first I thought I could prevent this by configuring Prettier,
+but I couldn't find how. Instead, I added .vscode settings to stop it from
+formatting on save (I want spaces and new lines - they’re fragments of code, not
+fully code). Found the solution here
+[https://stackoverflow.com/questions/44831313/how-to-exclude-files-from-format-on-save-in-vscode](https://stackoverflow.com/questions/44831313/how-to-exclude-files-from-format-on-save-in-vscode).
+
+Here's the additional configuration:
+
+```json
+"[handlebars]": {
+  "editor.formatOnSave": false
+}
+```
+
+#### The action
 
 One of the first questions I have is "How do I get kebab-case?" From the docs, I
 see it's with using the
@@ -233,14 +250,14 @@ look fine:
 
 ```
 
-#### Files to be edited
+### Files to be edited
 
 I find that the files I need to edit are the following two:
 
 - `./src/markdown/index.js`
 - `./src/utils/i18n/resources.json`
 
-##### Working out how to edit an exiting file
+#### Working out how to edit an exiting file
 
 I tried searching the README for _update_, _insert_ and _add_, but nothing.
 Finally, _[Modify](https://github.com/plopjs/plop#modify)_ turns out to be what
@@ -258,8 +275,8 @@ A regex for the start of a file is super easy in JavaScript, simply:
 /^/u;
 ```
 
-I put this into [https://regex101.com/](https://regex101.com/) to check it
-works, and then write my first modify action, with an inline template:
+I put this into [https://regex101.com/](https://regex101.com/r/L1VM6w/1/) to
+check it works, and then write my first modify action, with an inline template:
 
 ```js
 {
@@ -271,45 +288,152 @@ works, and then write my first modify action, with an inline template:
 },
 ```
 
-I'm not done with this file, and need to modify it a little further down, after
-the text `export default {`.
+But I'm not done with this file, and need to modify it a little further down,
+_after_ the text `export default {`.
 
-I can write some templates inline, using but others need the template file.
+I need a regex for this, and come up with
+[positive lookbehind](https://www.regular-expressions.info/lookaround.html#lookbehind)
+by playing with the regex on
+[https://regex101.com/](https://regex101.com/r/bkCEf1/1):
 
-I’m going to need to add these to both en and ro! My regex needs to be specific
-for each language routes/blog-posts section
+```js
+/(?<=export default \{)/u;
+```
 
-Trial and error to fix non-capturing groups which eslint threw up (?:
+So my template now includes the following action:
 
-Tried prettier config, no joy.
+```js
+{
+  type: 'modify',
+  path: './src/markdown/index.js',
+  pattern: /(?<=export default \{)/u, // After export default \{
+  template: "\n  '{{kebabCase title}}': {{camelCase title}},",
+},
+```
 
-Add .vscode settings to stop it from formatting on save my plop-templates (I
-want spaces and new lines - they’re fragments of code)
+I run `npm run plop` again to check everything is working as expected, and it
+does 😅!
 
-https://stackoverflow.com/questions/44831313/how-to-exclude-files-from-format-on-save-in-vscode
+#### To transform or to template
+
+Having finished with `./src/markdown/index.js`, I turn my attention to the last
+file to modify, `./src/utils/i18n/resources.json`. This is a _JSON_ file, and I
+need to find certain sections/nodes within it.
+
+I have a few options here: I consider using the _transform_ option to read the
+file in and convert it to an object, locate what I want to modify, and then
+stringify it again. However, after a little way down this route, I decide
+against it, as I loose the ability to take advantage of the handlebars templates
+and the helpers provided, and this seems to big a trade-off.
+
+I turn back to using templates again. The trade off with templates will be that
+I will need a regex and will need to modify the file four times: once for each
+of the two sections and again for each of the two languages.
+
+My regexes will be to find the paths:
+
+- "en"->"routes"
+- "en"->"blog-posts"
+- "ro"->"routes"
+- "ro"->"blog-posts"
 
 ```json
-"[handlebars]": {
-  "editor.formatOnSave": false
+{
+  "en": {
+    "routes": {
+      "/blog/how-to-automate-some-things": "/blog/how-to-automate-some-things",
+    },
+    "blog-posts": {
+      "how-to-automate-some-things-title": "How to automate some things",
+      "how-to-automate-some-things-description": "Automating things can be really useful, so we can look at automating something",
+      ...
+    }
+  },
+  "ro": {
+    "routes": {
+      "/blog/how-to-automate-some-things": "/blog/how-to-automate-some-things",
+    },
+    "blog-posts": {
+      "how-to-automate-some-things-title": "How to automate some things",
+      "how-to-automate-some-things-description": "Automating things can be really useful, so we can look at automating something",
+      ...
+    }
+  }
 }
 ```
 
-I have to have a separate template for routes, but not for blog-posts sections.
-This is because … actually, I can use data instead!
+I searched for a regex for JSON node, but only came up
+[/\{._\:\{._\:.\*\}\}/](https://www.regextester.com/95560). I adapted this
+initially to:
 
-Having tried looking at data: {isForRO: true/false}, I found a blog post on
-adding a handlebars helper called if_eq to do an if based on comparing two
-variables. I will then be able to do `{{#if_eq name 'Foo'}}` along with data:
-{forLanguage: ‘ro’}
+```js
+/"ro":\s\{/u // Locate the language
+/"ro":\s\{(?:(?:.|\n)*)"routes":\s\{/u // Locate the language and section, here routes
+/(?<="ro":\s\{(?:(?:.|\n)*)"routes":\s\{)/u // Wrap this in the positive lookbehind I used earlier
+```
 
-https://github.com/plopjs/plop#sethelper Handlebars.registerHelper directly
-corresponds to Plop.setHelper
+I had to use non-capturing groups as I was getting eslint errors
+_prefer-named-capture-group_.
 
-Got error if_eq doesn't match if - 2:10 which I discovered meant I had coded
-{{#eq_if}}{{/if}}! Didn’t work it out immediately though. Perhaps saying that
-{{/if}} didn’t match the opening {{#if_eq}} I might have got it sooner!
+#### Conditionals within handlebars templates
 
-To try to fix a problem between eslint and prettier, I installed
+When the language is _en_, I want the template to be:
+
+```hbs
+"/blog/{{kebabCase title}}": "/blog/{{kebabCase title}}"
+```
+
+But when it is _ro_, it should be:
+
+```hbs
+"/ro/blog/{{kebabCase title}}": "/ro/blog/{{kebabCase title}}"
+```
+
+I try handlebars conditional
+[#if](https://handlebarsjs.com/guide/builtin-helpers.html#if):
+
+```hbs
+"{{#if language === 'ro'}}/ro{{/if}}/blog/{{kebabCase title}}": "{{#if language === 'ro'}}/ro{{/if}}/blog/{{kebabCase title}}"
+```
+
+But this fails, as the built in if helper only takes one truthy parameter 😞.
+
+So, I investigate the _[data](https://github.com/plopjs/plop#modify)_ option as
+an alternative. But this falls flat, as it can only be a static object, and I
+would need it to be a function to take into consideration the user's input.
+
+After a few other dead ends, I search for a way to compare variable within a
+handlebars _if_, and find a blog post on adding a handlebars helper called
+`[if_eq](https://code-maven.com/handlebars-conditionals)`, which does an _if_
+based on comparing two variables. I will then be able to do
+`{{#if_eq language 'ro'}}`.
+
+Combining this with Plop's [setHelper](https://github.com/plopjs/plop#sethelper)
+(basically Handlebars.registerHelper), gives me what I want.
+
+I hit a snag, and get an error:
+
+```bash
+if_eq doesn't match if - 2:10
+```
+
+Which I discovered meant I had coded {{#eq_if}}{{/if}}! I didn’t work it out
+immediately though. Perhaps saying that {{/if}} didn’t match the opening
+{{#if_eq}} might have got me there sooner!
+
+Now, I've got an eslint error _Missing space before function parentheses
+eslintspace-before-function-paren_.
+
+```js
+function ifEq(a, b, opts) {
+  ...
+}
+```
+
+Prettier kept removing the space between the function name and the opening
+parentheses, but eslint didn't like this.
+
+To try to fix the problem between eslint and prettier, I installed
 https://github.com/prettier/eslint-config-prettier#installation. I configured my
 eslint extends as:
 
@@ -322,26 +446,31 @@ eslint extends as:
 ],
 ```
 
-https://github.com/prettier/prettier-vscode/issues/318
+But this had no effect.
+[https://github.com/prettier/prettier-vscode/issues/318](https://github.com/prettier/prettier-vscode/issues/318)
 
 So, I disabled it via eslint-disable tag, and just allowed prettier to do it’s
 thing.
 
-Adding a blog post
+Now, all that remains is putting in todays date in one of the handlebars
+template. I decide to do this with another handlebars helper:
 
-Add the markdown version of the blog post in new file under ./src/markdown
+```js
+// eslint-disable-next-line prefer-arrow-callback
+plop.setHelper('dateNow', function dateNow() {
+  const now = new Date();
+  const year = now.getFullYear().toString();
+  const month = (now.getMonth() + 1).toString().padStart(2, '0');
+  const day = now.getDate().toString().padStart(2, '0');
+  return `${year}-${month}-${day}`;
+});
+```
 
-Import it and export it within ./src/markdown/index.js
+And use this like so:
 
-Add it as a route within ./src/utils/i18n/resources.json under [lang]/routes for
-each language
+```hbs
+"{{kebabCase title}}-date-posted": "{{dateNow}}",
+```
 
-Add metadata within ./src/utils/i18n/resources.json under [lang]/blog-posts for
-each language • title (the post title, e.g. A new way to cook soup) •
-description (a brief summary of the post, e.g Think you know how to cook soup?
-Well, I'm going to tell you a new way that you'll love) • author (name of the
-author, e.g. Jonathan Darrer) • date-posted (format YYYY-MM-DD, e.g. 2020-08-18)
-• tags (comma separated list of tags, e.g. food,soup) • picture (a url to the
-image, e.g. for a local image /images/IMG_1126.jpg) • language (e.g. en or ro)
-
-Touching 4 files for each language
+Done! I run `npm run plop` and scaffold up a new blog post - about
+[writing a post about software automation using plop](https://github.com/jondarrer/my-personal-site/commit/fbce0f3202bff71a9433c179bfe63e9d979daa09)!
