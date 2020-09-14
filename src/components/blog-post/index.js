@@ -50,7 +50,7 @@ const BlogPost = ({ postInfo }) => {
             <pre
               style={{
                 backgroundColor: codeBgColour,
-                padding: '0.5em',
+                padding: '1em',
                 overflowX: 'scroll',
               }}
             >
