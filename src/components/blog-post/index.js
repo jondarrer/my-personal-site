@@ -1,6 +1,16 @@
 import React from 'react';
 import { Card, Heading, Image, Link, Text, useThemeUI } from 'theme-ui';
 import ReactMarkdown from 'react-markdown';
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
+import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
+import prism from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
+import dark from 'react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark';
+
+SyntaxHighlighter.registerLanguage('js', javascript);
+SyntaxHighlighter.registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('json', json);
 
 /**
  * @typedef {import('../../models').PostInfo} PostInfo
@@ -15,10 +25,12 @@ import ReactMarkdown from 'react-markdown';
 
 const BlogPost = ({ postInfo }) => {
   const { colorMode } = useThemeUI();
-  let codeBgColour = '#eee';
+  let codeBgColour = 'rgb(245, 242, 240)';
+  let style = prism;
 
   if (colorMode === 'dark') {
-    codeBgColour = '#222';
+    codeBgColour = 'rgb(43, 43, 43)';
+    style = dark;
   }
 
   return (
@@ -47,23 +59,9 @@ const BlogPost = ({ postInfo }) => {
           ),
           link: ({ children, ...props }) => <Link {...props}>{children}</Link>,
           code: ({ language, value }) => (
-            <pre
-              style={{
-                backgroundColor: codeBgColour,
-                padding: '1em',
-                overflowX: 'scroll',
-              }}
-            >
-              <code
-                className={`language-${language}`}
-                style={{
-                  fontFamily: 'Consolas,Monaco,"Andale Mono",Menlo,monospace',
-                  fontSize: '16px',
-                }}
-              >
-                {value}
-              </code>
-            </pre>
+            <SyntaxHighlighter language={language} style={style}>
+              {value}
+            </SyntaxHighlighter>
           ),
           inlineCode: ({ children }) => (
             <code
