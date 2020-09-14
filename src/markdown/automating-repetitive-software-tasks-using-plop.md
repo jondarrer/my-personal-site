@@ -8,10 +8,11 @@ When adding a new blog post to my site (which I currently do through code) -
 although I have refined the process to be as quick and easy as possible - I end
 up having to create/edit a number of different files, copying and pasting the
 same pieces of text over and over again, sometimes having to change the case
-from kebab-case to camel-case, plus boiler-plate. Given I have to do this each
-and every time I create a blog post (twice actually, as I have two translations
-of each post, one in English and one in Romanian), this seemed to me like a task
-ripe for automation.
+from kebab-case to camel-case, plus boiler-plate.
+
+Given I have to do this each and every time I create a blog post (twice
+actually, as I have two translations of each post, one in English and one in
+Romanian), this seemed to me like a task ripe for automation.
 
 ## Automating with plop
 
@@ -82,8 +83,9 @@ scaffold up a new blog post to these:
 
 They are all for free text, except language, which is a choice between either
 en/English or ro/Romanian. Free text questions can be defined as input prompts
-and are easy to add as they are described in the README. However to get a
-choice, I had to read the Inquirer repo docs at
+and are easy to add as they are described in the README.
+
+However to get a choice, I had to read the Inquirer repo docs at
 [https://github.com/SBoudrias/Inquirer.js/#prompt-types](https://github.com/SBoudrias/Inquirer.js/#prompt-types).
 I find [list](https://github.com/SBoudrias/Inquirer.js/#list---type-list) is the
 one I want (allowing one response, rather than checkbox which allows multiple),
@@ -201,9 +203,11 @@ I create a template in the suggested folder `./plop-templates`:
 
 I noticed that my handlebars template was removing the first blank line when I
 saved the file. At first I thought I could prevent this by configuring Prettier,
-but I couldn't find how. Instead, I added .vscode settings to stop it from
-formatting on save (I want spaces and new lines - they’re fragments of code, not
-fully code). Found the solution here
+but I couldn't find how.
+
+Instead, I added .vscode settings to stop it from formatting on save (I want
+spaces and new lines - they’re fragments of code, not fully code). Found the
+solution here
 [https://stackoverflow.com/questions/44831313/how-to-exclude-files-from-format-on-save-in-vscode](https://stackoverflow.com/questions/44831313/how-to-exclude-files-from-format-on-save-in-vscode).
 
 Here's the additional configuration:
