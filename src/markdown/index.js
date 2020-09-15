@@ -1,3 +1,5 @@
+import creareaDeImaginiDePostarePeBlogCuPablo from './crearea-de-imagini-de-postare-pe-blog-cu-pablo.md';
+import creatingBlogPostImagesWithPablo from './creating-blog-post-images-with-pablo.md';
 import automatingRepetitiveSoftwareTasksUsingPlop from './automating-repetitive-software-tasks-using-plop.md';
 import post1 from './post-1.md';
 import post2 from './post-2.md';
@@ -8,6 +10,8 @@ import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-c
 import learningOAuth2AndOIDC from './learning-oauth-2-and-oidc.md';
 
 export default {
+  'crearea-de-imagini-de-postare-pe-blog-cu-pablo': creareaDeImaginiDePostarePeBlogCuPablo,
+  'creating-blog-post-images-with-pablo': creatingBlogPostImagesWithPablo,
   'automating-repetitive-software-tasks-using-plop': automatingRepetitiveSoftwareTasksUsingPlop,
   'post-1': post1,
   'post-2': post2,
