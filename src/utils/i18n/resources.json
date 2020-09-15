@@ -25,7 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
-      "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
+      "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/blog/creating-blog-post-images-with-pablo",
       "/blog/creating-blog-post-images-with-pablo": "/blog/creating-blog-post-images-with-pablo",
       "/blog/automating-repetitive-software-tasks-using-plop": "/blog/automating-repetitive-software-tasks-using-plop",
       "/": "/",
@@ -142,7 +142,7 @@
     },
     "routes": {
       "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
-      "/blog/creating-blog-post-images-with-pablo": "/blog/creating-blog-post-images-with-pablo",
+      "/blog/creating-blog-post-images-with-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
       "/blog/automating-repetitive-software-tasks-using-plop": "/blog/automating-repetitive-software-tasks-using-plop",
       "/": "/ro",
       "/ro": "/ro",
