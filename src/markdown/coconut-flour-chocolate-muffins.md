@@ -1,4 +1,4 @@
-# Coconut Flour Chocolate Muffin
+# Coconut flour chocolate muffins
 
 ## [https://healthyrecipesblogs.com/coconut-flour-chocolate-muffins/](https://healthyrecipesblogs.com/coconut-flour-chocolate-muffins/)
 

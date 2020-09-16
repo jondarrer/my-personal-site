@@ -1,8 +1,8 @@
-# Automating repetitive software tasks using plop
+# Automating repetitive software tasks using Plop
 
 ![](/images/automating-with-plop.jpg)
 
-## Repeating the same thing over and over again, copying and pasting, converting text from kebab-case to camel-case, etc. may indicate a task suitable for automation. I integrated plop into my node project to help me with such a task, adding a new blog post, and here I describe my journey
+## Repeating the same thing over and over again, copying and pasting, converting text from kebab-case to camel-case, etc. may indicate a task suitable for automation. I integrated Plop into my node project to help me with such a task, adding a new blog post, and here I describe my journey
 
 ## The problem
 
@@ -16,7 +16,7 @@ Given I have to do this each and every time I create a blog post (twice
 actually, as I have two translations of each post, one in English and one in
 Romanian), this seemed to me like a task ripe for automation.
 
-## Automating with plop
+## Automating with Plop
 
 [Plop](https://github.com/plopjs/plop) is a popular framework for automating
 tasks involving creating files based on templates and user input, using a
@@ -25,7 +25,7 @@ do. In fact, it describes itself thus:
 
 > basically glue code between inquirer prompts and handlebar templates
 
-_Confession: I have actually used plop briefly for work before, so I'm not a
+_Confession: I have actually used Plop briefly for work before, so I'm not a
 complete newbie, but I had only copied and pasted what someone had already done.
 Here I'm going to follow the project README as if I were new to it._
 
@@ -64,7 +64,7 @@ module.exports = (plop) => {
 ```
 
 I purposely left prompts and actions empty, so I could fill them in myself.
-However, I was able to run plop without getting any errors (or any other
+However, I was able to run Plop without getting any errors (or any other
 messages!)
 
 ## Prompts
@@ -72,7 +72,7 @@ messages!)
 I already remembered that prompts are the questions that get asked, and allow
 for the gathering of user input. (I'll address actions later.)
 
-I’ve boiled down the questions I want plop to ask, each time I want it to
+I’ve boiled down the questions I want Plop to ask, each time I want it to
 scaffold up a new blog post to these:
 
 ### The questions
@@ -244,7 +244,7 @@ With this in hand, I have the following action in my plopfile:
 },
 ```
 
-Having already written the template, I run plop; the file is created and things
+Having already written the template, I run Plop; the file is created and things
 look fine:
 
 `./src/markdown/how-to-automate-some-things.md`:
@@ -482,5 +482,5 @@ And use this like so:
 
 ## The end
 
-Done! I run `npm run plop` and scaffold up a new blog post - about
-[writing a post about software automation using plop](https://github.com/jondarrer/my-personal-site/commit/fbce0f3202bff71a9433c179bfe63e9d979daa09)!
+Done! I run `npm run plop` and scaffold up a new blog post -
+[writing a post about software automation using Plop](https://github.com/jondarrer/my-personal-site/commit/fbce0f3202bff71a9433c179bfe63e9d979daa09)!

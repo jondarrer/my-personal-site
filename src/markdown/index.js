@@ -5,7 +5,7 @@ import post1 from './post-1.md';
 import post2 from './post-2.md';
 import peaSoupRecipe from './pea-soup-recipe.md';
 import retetaDeSupaDeMazare from './reteta-de-supa-de-mazare.md';
-import coconutFlourChocolateMuffin from './coconut-flour-chocolate-muffin.md';
+import coconutFlourChocolateMuffins from './coconut-flour-chocolate-muffins.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
 import learningOAuth2AndOIDC from './learning-oauth-2-and-oidc.md';
 
@@ -17,7 +17,7 @@ export default {
   'post-2': post2,
   'pea-soup-recipe': peaSoupRecipe,
   'reteta-de-supa-de-mazare': retetaDeSupaDeMazare,
-  'coconut-flour-chocolate-muffin': coconutFlourChocolateMuffin,
+  'coconut-flour-chocolate-muffins': coconutFlourChocolateMuffins,
   'muffin-de-ciocolata-cu-faina-de-cocos': muffinDeCiocolataCuFainaDeCocos,
   'learning-oauth-2-and-oidc': learningOAuth2AndOIDC,
 };
