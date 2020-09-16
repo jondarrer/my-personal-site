@@ -47,9 +47,13 @@ const BlogPost = ({ postInfo }) => {
             </Text>
           ),
           image: ({ children: _, ...props }) => (
-            <Card mb={3}>
-              <Image alt={props.alt} src={props.src} />
-              <Text variant="text.default">{props.alt}</Text>
+            <Card mb={3} p={0} sx={{ borderRadius: 0 }}>
+              <Image
+                alt={props.alt}
+                src={props.src}
+                variant="images.blogPost"
+              />
+              {props.alt && <Text variant="text.blogPost">{props.alt}</Text>}
             </Card>
           ),
           text: ({ children }) => (

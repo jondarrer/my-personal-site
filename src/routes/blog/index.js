@@ -56,7 +56,7 @@ const BlogPage = ({ locales }) => {
                 sx={{ display: 'block' }}
                 to={`${lng === 'ro' ? '/ro' : ''}/blog/${post.id}`}
               >
-                <Grid columns={[1, null, '128px auto']} gap={2}>
+                <Grid columns={[1, null, '256px auto']} gap={2}>
                   {post.picture ? (
                     <Image src={post.picture} mt={[0, null, 4]} />
                   ) : (

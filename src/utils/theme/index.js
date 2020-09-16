@@ -49,6 +49,7 @@ export default {
   images: {
     blogPost: {
       display: 'block',
+      padding: 0,
     },
   },
   layout: {
@@ -115,6 +116,9 @@ export default {
       mb: '0.5em',
     },
     blogPost: {
+      lineHeight: '1.625rem',
+      marginTop: 0,
+      marginBottom: '1em',
       p: '1em',
     },
   },
