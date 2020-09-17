@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
       "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/blog/creating-blog-post-images-with-pablo",
       "/blog/creating-blog-post-images-with-pablo": "/blog/creating-blog-post-images-with-pablo",
       "/blog/automating-repetitive-software-tasks-using-plop": "/blog/automating-repetitive-software-tasks-using-plop",
@@ -44,6 +45,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "learning-o-auth-2-0-and-open-id-connect-title": "Learning OAuth 2.0 and OpenID Connect",
+      "learning-o-auth-2-0-and-open-id-connect-description": "What I have understood as I have begun to learn about OAuth 2.0 and OpenID Connect",
+      "learning-o-auth-2-0-and-open-id-connect-author": "Jonathan Darrer",
+      "learning-o-auth-2-0-and-open-id-connect-date-posted": "2020-09-17",
+      "learning-o-auth-2-0-and-open-id-connect-tags": "software,oauth",
+      "learning-o-auth-2-0-and-open-id-connect-picture": "",
+      "learning-o-auth-2-0-and-open-id-connect-language": "en",
       "crearea-de-imagini-de-postare-pe-blog-cu-pablo-title": "Crearea de imagini de postare pe blog cu Pablo",
       "crearea-de-imagini-de-postare-pe-blog-cu-pablo-description": "Aveam nevoie de o modalitate simplă și rapidă de a crea imagini frumoase de postări pe blog. L-am găsit pe Buffer Pablo, ceea ce mi-a permis să fac asta gratuit",
       "crearea-de-imagini-de-postare-pe-blog-cu-pablo-author": "Jonathan Darrer",
@@ -141,6 +149,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
       "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
       "/blog/creating-blog-post-images-with-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
       "/blog/automating-repetitive-software-tasks-using-plop": "/blog/automating-repetitive-software-tasks-using-plop",
@@ -160,6 +169,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "learning-o-auth-2-0-and-open-id-connect-title": "Learning OAuth 2.0 and OpenID Connect",
+      "learning-o-auth-2-0-and-open-id-connect-description": "What I have understood as I have begun to learn about OAuth 2.0 and OpenID Connect",
+      "learning-o-auth-2-0-and-open-id-connect-author": "Jonathan Darrer",
+      "learning-o-auth-2-0-and-open-id-connect-date-posted": "2020-09-17",
+      "learning-o-auth-2-0-and-open-id-connect-tags": "software,oauth",
+      "learning-o-auth-2-0-and-open-id-connect-picture": "",
+      "learning-o-auth-2-0-and-open-id-connect-language": "en",
       "crearea-de-imagini-de-postare-pe-blog-cu-pablo-title": "Crearea de imagini de postare pe blog cu Pablo",
       "crearea-de-imagini-de-postare-pe-blog-cu-pablo-description": "Aveam nevoie de o modalitate simplă și rapidă de a crea imagini frumoase de postări pe blog. L-am găsit pe Buffer Pablo, ceea ce mi-a permis să fac asta gratuit",
       "crearea-de-imagini-de-postare-pe-blog-cu-pablo-author": "Jonathan Darrer",
