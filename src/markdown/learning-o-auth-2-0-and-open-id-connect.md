@@ -1,5 +1,7 @@
 # Learning OAuth 2.0 and OpenID Connect
 
+![](./images/../../images/oauth-2-0-learnings.jpg)
+
 ## What I have understood as I have begun to learn about OAuth 2.0 and OpenID Connect
 
 ### [OAuth 2.0 and OpenID Connect (in plain English)](https://www.youtube.com/watch?v=996OiexHze0)
@@ -15,6 +17,14 @@ address and password)!
 - Redirect URI (where on the application to return the user)
 - Access token (the permission to do what I need to do)
 
-Client -> Authorisation server Authorisation server -> Resource server Resource
-server -> Redirect URI Redirect URI -> Authorisation server (request token)
+![OAuth 2.0 Code flow](./images/../../images/oauth-code-flow.png)
+
+Client -> Authorisation server
+
+Authorisation server -> Resource server Resource
+
+server -> Redirect URI
+
+Redirect URI -> Authorisation server (request token)
+
 Authorisation server -> Redirect URI (token)
