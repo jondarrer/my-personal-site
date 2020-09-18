@@ -19,11 +19,13 @@ address and password)!
 
 ![OAuth 2.0 Code flow](./images/../../images/oauth-code-flow.png)
 
-Client -> Authorisation server
+Client -> Resource owner
 
-Authorisation server -> Resource server Resource
+Resource owner -> Authorisation server
 
-server -> Redirect URI
+Authorisation server -> Resource server
+
+Resource server -> Redirect URI
 
 Redirect URI -> Authorisation server (request token)
 
