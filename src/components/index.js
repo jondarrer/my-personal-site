@@ -6,3 +6,5 @@ export { default as Layout } from './layout';
 export { default as ColourModeSwitcher } from './colour-mode-switcher';
 export { default as BlogPost } from './blog-post';
 export { default as Meta } from './meta';
+export { default as LoginLogoutButton } from './login-logout-button';
+export { default as ProtectedRoute } from './protected-route';

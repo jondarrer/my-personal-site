@@ -32,8 +32,10 @@
       "/": "/",
       "/ro": "/",
       "/blog": "/blog",
+      "/profile": "/profile",
       "/blog/post-1": "/blog/post-1",
       "/ro/blog": "/blog",
+      "/ro/profile": "/profile",
       "/ro/blog/post-2": "/blog/post-1",
       "/blog/pea-soup-recipe": "/blog/pea-soup-recipe",
       "/ro/blog/reteta-de-supa-de-mazare": "/blog/pea-soup-recipe",
@@ -123,7 +125,8 @@
       "meta-business-description": "Software Engineer in London, UK",
       "blog-page-title": "Blog Posts",
       "meta-description-blog": "Blog written by Jonathan Darrer",
-      "meta-keywords-blog": "software engineering"
+      "meta-keywords-blog": "software engineering",
+      "profile-page-title": "Profile"
     }
   },
   "ro": {
@@ -156,8 +159,10 @@
       "/": "/ro",
       "/ro": "/ro",
       "/blog": "/ro/blog",
+      "/profile": "/ro/profile",
       "/blog/post-1": "/ro/blog/post-2",
       "/ro/blog": "/ro/blog",
+      "/ro/profile": "/ro/profile",
       "/ro/blog/post-2": "/ro/blog/post-2",
       "/blog/pea-soup-recipe": "/ro/blog/reteta-de-supa-de-mazare",
       "/ro/blog/reteta-de-supa-de-mazare": "/ro/blog/reteta-de-supa-de-mazare",
@@ -247,7 +252,8 @@
       "meta-business-description": "Inginer software în Londra, Marea Britanie",
       "blog-page-title": "Postări pe Blog",
       "meta-description-blog": "Blog scris de Jonathan Darrer",
-      "meta-keywords-blog": "inginerie software"
+      "meta-keywords-blog": "inginerie software",
+      "profile-page-title": "Profil"
     }
   }
 }

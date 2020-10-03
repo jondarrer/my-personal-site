@@ -9,6 +9,7 @@ import LanguageSwitcher from '../language-switcher';
 import ColourModeSwitcher from '../colour-mode-switcher';
 import MenuLink from '../menu-link';
 import SlideOutMenu from '../slide-out-menu';
+import LoginLogoutButton from '../login-logout-button';
 
 import SunIcon from '../../images/sun.svg';
 import MoonIcon from '../../images/moon.svg';
@@ -34,6 +35,12 @@ const Navbar = ({ variant }) => {
       text: t('nav-bar:blog', { lng: currentLanguage }),
     },
   ];
+
+  let defaultReturnTo = 'http://localhost:9000';
+
+  if (typeof window !== 'undefined') {
+    defaultReturnTo = window.location.origin;
+  }
 
   return (
     <Flex
@@ -99,6 +106,7 @@ const Navbar = ({ variant }) => {
           ]}
           variant={variant}
         />
+        <LoginLogoutButton logoutReturnTo={defaultReturnTo} />
       </Box>
     </Flex>
   );
