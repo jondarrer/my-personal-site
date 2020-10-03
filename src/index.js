@@ -13,7 +13,9 @@ import { client } from './graphql/client';
 let defaultRedirectUri = 'http://localhost:9000';
 
 if (typeof window !== 'undefined') {
-  defaultRedirectUri = window.location.pathname;
+  defaultRedirectUri =
+    window.location.origin +
+    (window.location.pathname === '/' ? '' : window.location.pathname);
 }
 
 hydrate(

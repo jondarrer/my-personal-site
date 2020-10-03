@@ -39,7 +39,9 @@ const Navbar = ({ variant }) => {
   let defaultReturnTo = 'http://localhost:9000';
 
   if (typeof window !== 'undefined') {
-    defaultReturnTo = window.location.origin;
+    defaultReturnTo =
+      window.location.origin +
+      (window.location.pathname === '/' ? '' : window.location.pathname);
   }
 
   return (
