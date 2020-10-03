@@ -26,14 +26,16 @@ const LoginLogoutButton = ({ logoutReturnTo }) => {
     logout,
   } = useAuth0();
 
-  console.log({ user, isAuthenticated, isLoading, error });
-
   if (isLoading) {
     return <Spinner size={20} strokeWidth={2} aria-label="Loading" />;
   }
 
   if (!isAuthenticated) {
     return <LoginButton onClickHandler={loginWithRedirect} />;
+  }
+
+  if (error) {
+    console.warn(error);
   }
 
   return (

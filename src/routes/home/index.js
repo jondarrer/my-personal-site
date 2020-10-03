@@ -24,8 +24,6 @@ const HomePage = ({ locales }) => {
     variables: { language: lng },
   });
 
-  // console.log('HomePage', { loading, error, data });
-
   return (
     <>
       <Meta locales={locales} pageTitle={t('nav-bar:home', { lng })} />
