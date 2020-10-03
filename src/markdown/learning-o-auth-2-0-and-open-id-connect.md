@@ -30,3 +30,29 @@ Resource server -> Redirect URI
 Redirect URI -> Authorisation server (request token)
 
 Authorisation server -> Redirect URI (token)
+
+### Auth0 React tutorial
+
+Following the
+[Auth0 React tutorial](https://auth0.com/docs/quickstart/spa/react/01-login),
+and learned about how to configure an [Auth0 application]() and then about the
+[Auth0 React SDK]().
+
+#### Sample application setup
+
+#### TDD
+
+https://www.nuomiphp.com/eplan/en/2884.html to show me how to mock destructured
+imports with Jest.
+
+```JavaScript
+jest.mock('@auth0/auth0-react');
+
+import { useAuth0 } from '@auth0/auth0-react';
+
+useAuth0.mockReturnValue({
+  user: null,
+  isAuthenticated: false,
+  isLoading: false,
+});
+```
