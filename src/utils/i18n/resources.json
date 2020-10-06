@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/ro/blog/psalmi-2": "/blog/psalm-2",
       "/blog/psalm-2": "/blog/psalm-2",
       "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
       "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/blog/creating-blog-post-images-with-pablo",
@@ -48,6 +49,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "psalmi-2-title": "Psalmi 2",
+      "psalmi-2-description": "Gânduri la Psalmul 2",
+      "psalmi-2-author": "Jonathan Darrer",
+      "psalmi-2-date-posted": "2020-10-06",
+      "psalmi-2-tags": "biblie,teologie",
+      "psalmi-2-picture": "/images/psalmi-2.jpg",
+      "psalmi-2-language": "ro",
       "psalm-2-title": "Psalm 2",
       "psalm-2-description": "Thoughts on Psalm 2",
       "psalm-2-author": "Jonathan Darrer",
@@ -160,7 +168,8 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
-      "/blog/psalm-2": "/blog/psalm-2",
+      "/ro/blog/psalmi-2": "/ro/blog/psalmi-2",
+      "/blog/psalm-2": "/ro/blog/psalmi-2",
       "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
       "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
       "/blog/creating-blog-post-images-with-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
@@ -183,6 +192,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "psalmi-2-title": "Psalmi 2",
+      "psalmi-2-description": "Gânduri la Psalmul 2",
+      "psalmi-2-author": "Jonathan Darrer",
+      "psalmi-2-date-posted": "2020-10-06",
+      "psalmi-2-tags": "biblie,teologie",
+      "psalmi-2-picture": "/images/psalmi-2.jpg",
+      "psalmi-2-language": "ro",
       "psalm-2-title": "Psalm 2",
       "psalm-2-description": "Thoughts on Psalm 2",
       "psalm-2-author": "Jonathan Darrer",
