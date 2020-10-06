@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/psalm-2": "/blog/psalm-2",
       "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
       "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/blog/creating-blog-post-images-with-pablo",
       "/blog/creating-blog-post-images-with-pablo": "/blog/creating-blog-post-images-with-pablo",
@@ -47,6 +48,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "psalm-2-title": "Psalm 2",
+      "psalm-2-description": "Thoughts on Psalm 2",
+      "psalm-2-author": "Jonathan Darrer",
+      "psalm-2-date-posted": "2020-10-06",
+      "psalm-2-tags": "bible,theology",
+      "psalm-2-picture": "/images/psalm-2.jpg",
+      "psalm-2-language": "en",
       "learning-o-auth-2-0-and-open-id-connect-title": "Learning OAuth 2.0 and OpenID Connect",
       "learning-o-auth-2-0-and-open-id-connect-description": "What I have understood as I have begun to learn about OAuth 2.0 and OpenID Connect",
       "learning-o-auth-2-0-and-open-id-connect-author": "Jonathan Darrer",
@@ -152,6 +160,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/psalm-2": "/blog/psalm-2",
       "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
       "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
       "/blog/creating-blog-post-images-with-pablo": "/ro/blog/crearea-de-imagini-de-postare-pe-blog-cu-pablo",
@@ -174,6 +183,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "psalm-2-title": "Psalm 2",
+      "psalm-2-description": "Thoughts on Psalm 2",
+      "psalm-2-author": "Jonathan Darrer",
+      "psalm-2-date-posted": "2020-10-06",
+      "psalm-2-tags": "bible,theology",
+      "psalm-2-picture": "/images/psalm-2.jpg",
+      "psalm-2-language": "en",
       "learning-o-auth-2-0-and-open-id-connect-title": "Learning OAuth 2.0 and OpenID Connect",
       "learning-o-auth-2-0-and-open-id-connect-description": "What I have understood as I have begun to learn about OAuth 2.0 and OpenID Connect",
       "learning-o-auth-2-0-and-open-id-connect-author": "Jonathan Darrer",

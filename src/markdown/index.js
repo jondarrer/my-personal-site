@@ -1,3 +1,4 @@
+import psalm2 from './psalm-2.md';
 import learningOAuth20AndOpenIdConnect from './learning-o-auth-2-0-and-open-id-connect.md';
 import creareaDeImaginiDePostarePeBlogCuPablo from './crearea-de-imagini-de-postare-pe-blog-cu-pablo.md';
 import creatingBlogPostImagesWithPablo from './creating-blog-post-images-with-pablo.md';
@@ -10,6 +11,7 @@ import coconutFlourChocolateMuffins from './coconut-flour-chocolate-muffins.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
 
 export default {
+  'psalm-2': psalm2,
   'learning-o-auth-2-0-and-open-id-connect': learningOAuth20AndOpenIdConnect,
   'crearea-de-imagini-de-postare-pe-blog-cu-pablo': creareaDeImaginiDePostarePeBlogCuPablo,
   'creating-blog-post-images-with-pablo': creatingBlogPostImagesWithPablo,
