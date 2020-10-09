@@ -15,7 +15,8 @@ let defaultRedirectUri = 'http://localhost:9000';
 if (typeof window !== 'undefined') {
   defaultRedirectUri =
     window.location.origin +
-    (window.location.pathname === '/' ? '' : window.location.pathname);
+    (window.location.pathname.startsWith('/ro') ? '/ro' : '') +
+    '/profile';
 }
 
 hydrate(
