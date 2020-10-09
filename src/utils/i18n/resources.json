@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learning-python": "/blog/learning-python",
       "/ro/blog/psalmi-2": "/blog/psalm-2",
       "/blog/psalm-2": "/blog/psalm-2",
       "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
@@ -49,6 +50,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "learning-python-title": "Learning Python",
+      "learning-python-description": "My journey learning Python as an experienced software developer",
+      "learning-python-author": "Jonathan Darrer",
+      "learning-python-date-posted": "2020-10-09",
+      "learning-python-tags": "technology,software",
+      "learning-python-picture": "/images/learning-python.jpg",
+      "learning-python-language": "en",
       "psalmi-2-title": "Psalmi 2",
       "psalmi-2-description": "Gânduri la Psalmul 2",
       "psalmi-2-author": "Jonathan Darrer",
@@ -168,6 +176,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learning-python": "/blog/learning-python",
       "/ro/blog/psalmi-2": "/ro/blog/psalmi-2",
       "/blog/psalm-2": "/ro/blog/psalmi-2",
       "/blog/learning-o-auth-2-0-and-open-id-connect": "/blog/learning-o-auth-2-0-and-open-id-connect",
@@ -192,6 +201,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "learning-python-title": "Learning Python",
+      "learning-python-description": "My journey learning Python as an experienced software developer",
+      "learning-python-author": "Jonathan Darrer",
+      "learning-python-date-posted": "2020-10-09",
+      "learning-python-tags": "technology,software",
+      "learning-python-picture": "/images/learning-python.jpg",
+      "learning-python-language": "en",
       "psalmi-2-title": "Psalmi 2",
       "psalmi-2-description": "Gânduri la Psalmul 2",
       "psalmi-2-author": "Jonathan Darrer",
