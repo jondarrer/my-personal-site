@@ -17,8 +17,8 @@ Based on the recipe
 - 60g desiccated coconut, plus a little for the top
 - juice and zest of 1 lime
 
-![Butter, sugar and eggs](/images/IMG_0048.jpg)
-
 ![The raw ingredients](/images/IMG_1915.jpg)
+
+![Butter, sugar and eggs](/images/IMG_0048.jpg)
 
 ![A delicious muffin](/images/IMG_2623.jpg)
