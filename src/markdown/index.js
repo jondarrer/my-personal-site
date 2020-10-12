@@ -1,3 +1,4 @@
+import blueberryRaspberryLimeAndCoconutFlourCake from './blueberry-raspberry-lime-and-coconut-flour-cake.md';
 import learningPython from './learning-python.md';
 import psalmi2 from './psalmi-2.md';
 import psalm2 from './psalm-2.md';
@@ -13,6 +14,7 @@ import coconutFlourChocolateMuffins from './coconut-flour-chocolate-muffins.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
 
 export default {
+  'blueberry-raspberry-lime-and-coconut-flour-cake': blueberryRaspberryLimeAndCoconutFlourCake,
   'learning-python': learningPython,
   'psalmi-2': psalmi2,
   'psalm-2': psalm2,

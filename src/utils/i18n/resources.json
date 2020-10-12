@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
       "/ro/blog/psalmi-2": "/blog/psalm-2",
       "/blog/psalm-2": "/blog/psalm-2",
@@ -50,6 +51,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "blueberry-raspberry-lime-and-coconut-flour-cake-title": "Blueberry, raspberry, lime and coconut flour cake",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-description": "Delicious coconut flour cake with blueberry, raspberry and lime",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-author": "Jonathan Darrer",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-date-posted": "2020-10-11",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-tags": "food,recipie,cake",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-picture": "/images/blueberry-raspberry-lime-coconut-flour-cake.jpg",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-language": "en",
       "learning-python-title": "Learning Python",
       "learning-python-description": "My journey learning Python as an experienced software developer",
       "learning-python-author": "Jonathan Darrer",
@@ -176,6 +184,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
       "/ro/blog/psalmi-2": "/ro/blog/psalmi-2",
       "/blog/psalm-2": "/ro/blog/psalmi-2",
@@ -201,6 +210,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "blueberry-raspberry-lime-and-coconut-flour-cake-title": "Blueberry, raspberry, lime and coconut flour cake",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-description": "Delicious coconut flour cake with blueberry, raspberry and lime",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-author": "Jonathan Darrer",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-date-posted": "2020-10-11",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-tags": "food,recipie,cake",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-picture": "/images/blueberry-raspberry-lime-coconut-flour-cake.jpg",
+      "blueberry-raspberry-lime-and-coconut-flour-cake-language": "en",
       "learning-python-title": "Learning Python",
       "learning-python-description": "My journey learning Python as an experienced software developer",
       "learning-python-author": "Jonathan Darrer",
