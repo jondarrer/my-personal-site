@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
       "/ro/blog/psalmi-2": "/blog/psalm-2",
@@ -51,6 +52,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "psalm-3-title": "Psalm 3",
+      "psalm-3-description": "Thoughts on Psalm 3",
+      "psalm-3-author": "Jonathan Darrer",
+      "psalm-3-date-posted": "2020-10-14",
+      "psalm-3-tags": "bible,theology",
+      "psalm-3-picture": "/images/psalm-3.jpg",
+      "psalm-3-language": "en",
       "blueberry-raspberry-lime-and-coconut-flour-cake-title": "Blueberry, raspberry, lime and coconut flour cake",
       "blueberry-raspberry-lime-and-coconut-flour-cake-description": "Delicious coconut flour cake with blueberry, raspberry and lime",
       "blueberry-raspberry-lime-and-coconut-flour-cake-author": "Jonathan Darrer",
@@ -184,6 +192,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
       "/ro/blog/psalmi-2": "/ro/blog/psalmi-2",
@@ -210,6 +219,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "psalm-3-title": "Psalm 3",
+      "psalm-3-description": "Thoughts on Psalm 3",
+      "psalm-3-author": "Jonathan Darrer",
+      "psalm-3-date-posted": "2020-10-14",
+      "psalm-3-tags": "bible,theology",
+      "psalm-3-picture": "/images/psalm-3.jpg",
+      "psalm-3-language": "en",
       "blueberry-raspberry-lime-and-coconut-flour-cake-title": "Blueberry, raspberry, lime and coconut flour cake",
       "blueberry-raspberry-lime-and-coconut-flour-cake-description": "Delicious coconut flour cake with blueberry, raspberry and lime",
       "blueberry-raspberry-lime-and-coconut-flour-cake-author": "Jonathan Darrer",
