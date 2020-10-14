@@ -1,5 +1,13 @@
 import React from 'react';
-import { Card, Heading, Image, Link, Text, useThemeUI } from 'theme-ui';
+import {
+  Container,
+  Card,
+  Heading,
+  Image,
+  Link,
+  Text,
+  useThemeUI,
+} from 'theme-ui';
 import ReactMarkdown from 'react-markdown';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
@@ -46,6 +54,7 @@ const BlogPost = ({ postInfo }) => {
               {children}
             </Text>
           ),
+          blockquote: ({ children }) => <blockquote>{children}</blockquote>,
           image: ({ children: _, ...props }) => (
             <Card mb={3} p={0} sx={{ borderRadius: 0 }}>
               <Image
@@ -62,11 +71,20 @@ const BlogPost = ({ postInfo }) => {
             </Text>
           ),
           link: ({ children, ...props }) => <Link {...props}>{children}</Link>,
-          code: ({ language, value }) => (
-            <SyntaxHighlighter language={language} style={style}>
-              {value}
-            </SyntaxHighlighter>
-          ),
+          code: ({ language, value }) => {
+            if (language === 'BiblePassage') {
+              return (
+                <Container as="pre" variant="biblePassage">
+                  {value}
+                </Container>
+              );
+            }
+            return (
+              <SyntaxHighlighter language={language} style={style}>
+                {value}
+              </SyntaxHighlighter>
+            );
+          },
           inlineCode: ({ children }) => (
             <code
               style={{

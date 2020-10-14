@@ -57,6 +57,13 @@ export default {
       boxShadow: '0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5',
       mb: 3,
     },
+    biblePassage: {
+      fontFamily: 'Times New Roman',
+      fontSize: '18px',
+      fontStyle: 'italic',
+      lineHeight: '1.625em',
+      whiteSpace: 'pre-wrap',
+    },
   },
   links: {
     header: {
