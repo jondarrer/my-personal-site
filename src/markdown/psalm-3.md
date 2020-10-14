@@ -14,9 +14,9 @@ I call out to the Lord,
     and he answers me from His holy mountain.
 
 I lie down and sleep;
-  I wake again, because the Lord sustains me.
+    I wake again, because the Lord sustains me.
 I will not fear though tens of thousands
-  assail me from every side.
+    assail me from every side.
 
 Arise, Lord!
     Deliver me my God!
