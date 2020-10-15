@@ -27,6 +27,6 @@ From the Lord comes deliverance.
     May your blessing be on Your people.
 ```
 
-[Psalm 2 (NIV)](https://www.biblegateway.com/passage/?search=Psalm%202&version=NIVUK)
+[Psalm 3 (NIV)](https://www.biblegateway.com/passage/?search=Psalm%203&version=NIVUK)
 
 ## Thoughts on Psalm 3
