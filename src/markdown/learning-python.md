@@ -1,5 +1,7 @@
 # Learning Python
 
+![](/images/learning-python.jpg)
+
 ## My journey learning Python as an experienced software developer
 
 I want to learn Python so I can join in some projects with friends.
