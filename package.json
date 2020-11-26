@@ -12,7 +12,8 @@
     "prestart:fb": "npm run build",
     "start:fb": "firebase serve --only hosting",
     "test": "jest --passWithNoTests",
-    "test:cy": "cypress run --spec **/*.feature"
+    "test:cy": "cypress run --spec **/*.feature",
+    "test:cy-open": "cypress open"
   },
   "repository": {
     "type": "git",

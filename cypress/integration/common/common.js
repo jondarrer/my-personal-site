@@ -1,9 +1,18 @@
-/* global cy */
-import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
+/* eslint-disable prefer-destructuring */
+/* eslint-disable prefer-arrow-callback */
+import { Before, Given, Then } from 'cypress-cucumber-preprocessor/steps';
 
 const url = 'http://localhost:9000';
 
-Given('I open {string} page in {string}', (pageName, language) => {
+Before(() => {
+  cy.wrap('dark').as('prefersColorScheme');
+});
+
+// eslint-disable-next-line space-before-function-paren
+Given('I open {string} page in {string}', function GivenIOpenAPageInALanguage(
+  pageName,
+  language
+) {
   let languageCode = '';
   switch (language) {
     case 'Romanian':
@@ -27,7 +36,24 @@ Given('I open {string} page in {string}', (pageName, language) => {
     default:
       break;
   }
-  cy.visit(`${url}${path}`);
+  const prefersColorScheme = this.prefersColorScheme;
+  cy.visit(`${url}${path}`, {
+    onBeforeLoad(win) {
+      const stubMatchMedia = cy.stub(win, 'matchMedia');
+
+      stubMatchMedia.withArgs('(prefers-color-scheme: dark)').returns({
+        media: '(prefers-color-scheme: dark)',
+        matches: prefersColorScheme === 'dark',
+        onchange: null,
+      });
+
+      stubMatchMedia.withArgs('(prefers-color-scheme: light)').returns({
+        media: '(prefers-color-scheme: light)',
+        matches: prefersColorScheme === 'light',
+        onchange: null,
+      });
+    },
+  });
 });
 
 Then('I see the title {string}', (title) => {
