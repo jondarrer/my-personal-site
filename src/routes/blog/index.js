@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 import {
   Box,
@@ -14,9 +14,11 @@ import {
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@apollo/client';
 
-import { Meta } from '../../components';
+import { Meta, Paginator } from '../../components';
 import { useLanguage } from '../../contexts';
 import { GET_POSTS } from '../../graphql/shared-queries';
+
+const useSearchParams = () => new URLSearchParams(useLocation().search);
 
 /**
  * Props for the BlogPage type
@@ -26,11 +28,15 @@ import { GET_POSTS } from '../../graphql/shared-queries';
  */
 
 const BlogPage = ({ locales }) => {
+  const search = useSearchParams();
   const { currentLanguage: lng } = useLanguage();
   const { t } = useTranslation();
   const { data } = useQuery(GET_POSTS, {
     variables: { language: lng },
   });
+  const currentPage = parseInt(search.get('page'), 10) || 1;
+
+  const onPageClickHandler = console.log;
 
   return (
     <>
@@ -77,6 +83,11 @@ const BlogPage = ({ locales }) => {
               </Link>
             ))}
           </Box>
+          <Paginator
+            currentPage={currentPage}
+            totalItems={data?.getPosts.length}
+            onPageClick={onPageClickHandler}
+          />
         </Container>
       </Flex>
     </>

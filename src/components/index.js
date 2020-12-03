@@ -8,3 +8,4 @@ export { default as BlogPost } from './blog-post';
 export { default as Meta } from './meta';
 export { default as LoginLogoutButton } from './login-logout-button';
 export { default as ProtectedRoute } from './protected-route';
+export { default as Paginator } from './paginator';
