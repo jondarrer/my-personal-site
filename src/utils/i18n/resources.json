@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme": "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme",
       "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
@@ -52,6 +53,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-title": "Writing Cypress tests involving the browser&#x27;s prefer-color-scheme",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-description": "Testing a website which incorporates a user&#x27;s preferred colour scheme with Cypress is fairly straight forward, if you know what to look for. Here&#x27;s the solution I came up with for my particular scenario",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-author": "Jonathan Darrer",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-date-posted": "2020-11-27",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-tags": "software",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-picture": "/images/cypress-tests-with-prefers-color-scheme.jpg",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-language": "en",
       "psalm-3-title": "Psalm 3",
       "psalm-3-description": "Thoughts on Psalm 3",
       "psalm-3-author": "Jonathan Darrer",
@@ -192,6 +200,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme": "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme",
       "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
@@ -219,6 +228,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-title": "Writing Cypress tests involving the browser&#x27;s prefer-color-scheme",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-description": "Testing a website which incorporates a user&#x27;s preferred colour scheme with Cypress is fairly straight forward, if you know what to look for. Here&#x27;s the solution I came up with for my particular scenario",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-author": "Jonathan Darrer",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-date-posted": "2020-11-27",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-tags": "software",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-picture": "/images/cypress-tests-with-prefers-color-scheme.jpg",
+      "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-language": "en",
       "psalm-3-title": "Psalm 3",
       "psalm-3-description": "Thoughts on Psalm 3",
       "psalm-3-author": "Jonathan Darrer",
