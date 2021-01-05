@@ -1,3 +1,4 @@
+import n1peter1112 from './1-peter-1-1-12.md';
 import psalm3 from './psalm-3.md';
 import blueberryRaspberryLimeAndCoconutFlourCake from './blueberry-raspberry-lime-and-coconut-flour-cake.md';
 import learningPython from './learning-python.md';
@@ -15,6 +16,7 @@ import coconutFlourChocolateMuffins from './coconut-flour-chocolate-muffins.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
 
 export default {
+  '1-peter-1-1-12': n1peter1112,
   'psalm-3': psalm3,
   'blueberry-raspberry-lime-and-coconut-flour-cake': blueberryRaspberryLimeAndCoconutFlourCake,
   'learning-python': learningPython,

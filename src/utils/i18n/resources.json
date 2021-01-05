@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/1-peter-1-1-12": "/blog/1-peter-1-1-12",
       "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
@@ -52,6 +53,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "1-peter-1-1-12-title": "1 Peter 1:1-12",
+      "1-peter-1-1-12-description": "Thoughts and reflections on 1 Peter 1:1-12",
+      "1-peter-1-1-12-author": "Jonathan Darrer",
+      "1-peter-1-1-12-date-posted": "2021-01-04",
+      "1-peter-1-1-12-tags": "bible,theology",
+      "1-peter-1-1-12-picture": "/images/1-peter-1-1-12.jpg",
+      "1-peter-1-1-12-language": "en",
       "psalm-3-title": "Psalm 3",
       "psalm-3-description": "Thoughts on Psalm 3",
       "psalm-3-author": "Jonathan Darrer",
@@ -192,6 +200,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/1-peter-1-1-12": "/blog/1-peter-1-1-12",
       "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
@@ -219,6 +228,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "1-peter-1-1-12-title": "1 Peter 1:1-12",
+      "1-peter-1-1-12-description": "Thoughts and reflections on 1 Peter 1:1-12",
+      "1-peter-1-1-12-author": "Jonathan Darrer",
+      "1-peter-1-1-12-date-posted": "2021-01-04",
+      "1-peter-1-1-12-tags": "bible,theology",
+      "1-peter-1-1-12-picture": "/images/1-peter-1-1-12.jpg",
+      "1-peter-1-1-12-language": "en",
       "psalm-3-title": "Psalm 3",
       "psalm-3-description": "Thoughts on Psalm 3",
       "psalm-3-author": "Jonathan Darrer",
