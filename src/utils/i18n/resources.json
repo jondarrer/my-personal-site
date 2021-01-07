@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/ro/blog/1-petru-1-1-12": "/blog/1-peter-1-1-12",
       "/blog/1-peter-1-1-12": "/blog/1-peter-1-1-12",
       "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
@@ -53,6 +54,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "1-petru-1-1-12-title": "1 Petru 1:1-12",
+      "1-petru-1-1-12-description": "Gânduri și reflecții despre 1 Petru 1: 1-12",
+      "1-petru-1-1-12-author": "Jonathan Darrer",
+      "1-petru-1-1-12-date-posted": "2021-01-07",
+      "1-petru-1-1-12-tags": "biblia,teologie",
+      "1-petru-1-1-12-picture": "/images/1-petru-1-1-12.jpg",
+      "1-petru-1-1-12-language": "ro",
       "1-peter-1-1-12-title": "1 Peter 1:1-12",
       "1-peter-1-1-12-description": "Thoughts and reflections on 1 Peter 1:1-12",
       "1-peter-1-1-12-author": "Jonathan Darrer",
@@ -200,7 +208,8 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
-      "/blog/1-peter-1-1-12": "/blog/1-peter-1-1-12",
+      "/ro/blog/1-petru-1-1-12": "/ro/blog/1-petru-1-1-12",
+      "/blog/1-peter-1-1-12": "/ro/blog/1-petru-1-1-12",
       "/blog/psalm-3": "/blog/psalm-3",
       "/blog/blueberry-raspberry-lime-and-coconut-flour-cake": "/blog/blueberry-raspberry-lime-and-coconut-flour-cake",
       "/blog/learning-python": "/blog/learning-python",
@@ -228,6 +237,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "1-petru-1-1-12-title": "1 Petru 1:1-12",
+      "1-petru-1-1-12-description": "Gânduri și reflecții despre 1 Petru 1: 1-12",
+      "1-petru-1-1-12-author": "Jonathan Darrer",
+      "1-petru-1-1-12-date-posted": "2021-01-07",
+      "1-petru-1-1-12-tags": "biblia,teologie",
+      "1-petru-1-1-12-picture": "/images/1-petru-1-1-12.jpg",
+      "1-petru-1-1-12-language": "ro",
       "1-peter-1-1-12-title": "1 Peter 1:1-12",
       "1-peter-1-1-12-description": "Thoughts and reflections on 1 Peter 1:1-12",
       "1-peter-1-1-12-author": "Jonathan Darrer",
