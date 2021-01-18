@@ -1,3 +1,5 @@
+import nuVaRepetatiCandVaConectati from './nu-va-repetati-cand-va-conectati.md';
+import donTRepeatYourselfWhenLogging from './dont-repeat-yourself-when-logging.md';
 import n1Petru1112 from './1-petru-1-1-12.md';
 import n1Peter1112 from './1-peter-1-1-12.md';
 import psalm3 from './psalm-3.md';
@@ -17,6 +19,8 @@ import coconutFlourChocolateMuffins from './coconut-flour-chocolate-muffins.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
 
 export default {
+  'nu-va-repetati-cand-va-conectati': nuVaRepetatiCandVaConectati,
+  'dont-repeat-yourself-when-logging': donTRepeatYourselfWhenLogging,
   '1-petru-1-1-12': n1Petru1112,
   '1-peter-1-1-12': n1Peter1112,
   'psalm-3': psalm3,

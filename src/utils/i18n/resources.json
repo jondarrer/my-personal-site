@@ -25,6 +25,8 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/ro/blog/nu-va-repetati-cand-va-conectati": "/blog/dont-repeat-yourself-when-logging",
+      "/blog/dont-repeat-yourself-when-logging": "/blog/dont-repeat-yourself-when-logging",
       "/ro/blog/1-petru-1-1-12": "/blog/1-peter-1-1-12",
       "/blog/1-peter-1-1-12": "/blog/1-peter-1-1-12",
       "/blog/psalm-3": "/blog/psalm-3",
@@ -54,6 +56,20 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "nu-va-repetati-când-va-conectati-title": "Nu vă repetați când vă conectați",
+      "nu-va-repetati-cand-va-conectati-description": "Înregistrarea inutilă a lucrurilor poate fi confuză și pur și simplu adaugă mai mult zgomot",
+      "nu-va-repetati-cand-va-conectati-author": "Jonathan Darrer",
+      "nu-va-repetati-cand-va-conectati-date-posted": "2021-01-18",
+      "nu-va-repetati-cand-va-conectati-tags": "tecnologie,software",
+      "nu-va-repetati-cand-va-conectati-picture": "/images/nu-va-repetati-cand-va-conectati.jpg",
+      "nu-va-repetati-cand-va-conectati-language": "ro",
+      "dont-repeat-yourself-when-logging-title": "Don't repeat yourself when logging",
+      "dont-repeat-yourself-when-logging-description": "Logging things unnecessarily can be confusing and simply add more noise",
+      "dont-repeat-yourself-when-logging-author": "Jonathan Darrer",
+      "dont-repeat-yourself-when-logging-date-posted": "2021-01-18",
+      "dont-repeat-yourself-when-logging-tags": "technology,software",
+      "dont-repeat-yourself-when-logging-picture": "/images/dont-repeat-yourself-when-logging.jpg",
+      "dont-repeat-yourself-when-logging-language": "en",
       "1-petru-1-1-12-title": "1 Petru 1:1-12",
       "1-petru-1-1-12-description": "Gânduri și reflecții despre 1 Petru 1: 1-12",
       "1-petru-1-1-12-author": "Jonathan Darrer",
@@ -208,6 +224,8 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/ro/blog/nu-va-repetati-cand-va-conectati": "/ro/blog/nu-va-repetati-cand-va-conectati",
+      "/blog/dont-repeat-yourself-when-logging": "/ro/blog/nu-va-repetati-cand-va-conectati",
       "/ro/blog/1-petru-1-1-12": "/ro/blog/1-petru-1-1-12",
       "/blog/1-peter-1-1-12": "/ro/blog/1-petru-1-1-12",
       "/blog/psalm-3": "/blog/psalm-3",
@@ -237,6 +255,20 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "nu-va-repetati-cand-va-conectati-title": "Nu vă repetați când vă conectați",
+      "nu-va-repetati-cand-va-conectati-description": "Înregistrarea inutilă a lucrurilor poate fi confuză și pur și simplu adaugă mai mult zgomot",
+      "nu-va-repetati-cand-va-conectati-author": "Jonathan Darrer",
+      "nu-va-repetati-cand-va-conectati-date-posted": "2021-01-18",
+      "nu-va-repetati-cand-va-conectati-tags": "tecnologie,software",
+      "nu-va-repetati-cand-va-conectati-picture": "/images/nu-va-repetati-cand-va-conectati.jpg",
+      "nu-va-repetati-cand-va-conectati-language": "ro",
+      "dont-repeat-yourself-when-logging-title": "Don't repeat yourself when logging",
+      "dont-repeat-yourself-when-logging-description": "Logging things unnecessarily can be confusing and simply add more noise",
+      "dont-repeat-yourself-when-logging-author": "Jonathan Darrer",
+      "dont-repeat-yourself-when-logging-date-posted": "2021-01-18",
+      "dont-repeat-yourself-when-logging-tags": "technology,software",
+      "dont-repeat-yourself-when-logging-picture": "/images/dont-repeat-yourself-when-logging.jpg",
+      "dont-repeat-yourself-when-logging-language": "en",
       "1-petru-1-1-12-title": "1 Petru 1:1-12",
       "1-petru-1-1-12-description": "Gânduri și reflecții despre 1 Petru 1: 1-12",
       "1-petru-1-1-12-author": "Jonathan Darrer",
