@@ -47,7 +47,7 @@ let postInfos;
 
 export const resolvers = {
   Query: {
-    getPosts: async (_a, { language, dateOrder }, _context) => {
+    getPosts: async (_a, { language, dateOrder, maxCount = 10 }, _context) => {
       if (!postInfos) {
         postInfos = {};
         const t = await i18n;
@@ -63,7 +63,8 @@ export const resolvers = {
           });
       }
       const filtered = filterPostsByLanguage(postInfos, language);
-      return orderPostsByDate(filtered, dateOrder);
+      const ordered = orderPostsByDate(filtered, dateOrder);
+      return ordered.slice(0, maxCount);
     },
     getPost: async (_a, { language, postId }, _context) => {
       const t = await i18n;
