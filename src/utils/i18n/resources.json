@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learnings-8-12-march-2021": "/blog/learnings-8-12-march-2021",
       "/ro/blog/nu-va-repetati-cand-va-conectati": "/blog/dont-repeat-yourself-when-logging",
       "/blog/dont-repeat-yourself-when-logging": "/blog/dont-repeat-yourself-when-logging",
       "/ro/blog/1-petru-1-1-12": "/blog/1-peter-1-1-12",
@@ -56,6 +57,13 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "learnings-8-12-march-2021-title": "Learnings 8-12 March 2021",
+      "learnings-8-12-march-2021-description": "Things I&#x27;ve learned from work the week of 8th to 12th March 2021",
+      "learnings-8-12-march-2021-author": "Jonathan Darrer",
+      "learnings-8-12-march-2021-date-posted": "2021-03-08",
+      "learnings-8-12-march-2021-tags": "technology,learnings",
+      "learnings-8-12-march-2021-picture": "/images/learnings-1.jpg",
+      "learnings-8-12-march-2021-language": "en",
       "nu-va-repetati-când-va-conectati-title": "Nu vă repetați când vă conectați",
       "nu-va-repetati-cand-va-conectati-description": "Înregistrarea inutilă a lucrurilor poate fi confuză și pur și simplu adaugă mai mult zgomot",
       "nu-va-repetati-cand-va-conectati-author": "Jonathan Darrer",
@@ -224,6 +232,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learnings-8-12-march-2021": "/blog/learnings-8-12-march-2021",
       "/ro/blog/nu-va-repetati-cand-va-conectati": "/ro/blog/nu-va-repetati-cand-va-conectati",
       "/blog/dont-repeat-yourself-when-logging": "/ro/blog/nu-va-repetati-cand-va-conectati",
       "/ro/blog/1-petru-1-1-12": "/ro/blog/1-petru-1-1-12",
@@ -255,6 +264,13 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "learnings-8-12-march-2021-title": "Learnings 8-12 March 2021",
+      "learnings-8-12-march-2021-description": "Things I&#x27;ve learned from work the week of 8th to 12th March 2021",
+      "learnings-8-12-march-2021-author": "Jonathan Darrer",
+      "learnings-8-12-march-2021-date-posted": "2021-03-08",
+      "learnings-8-12-march-2021-tags": "technology,learnings",
+      "learnings-8-12-march-2021-picture": "/images/learnings-1.jpg",
+      "learnings-8-12-march-2021-language": "en",
       "nu-va-repetati-cand-va-conectati-title": "Nu vă repetați când vă conectați",
       "nu-va-repetati-cand-va-conectati-description": "Înregistrarea inutilă a lucrurilor poate fi confuză și pur și simplu adaugă mai mult zgomot",
       "nu-va-repetati-cand-va-conectati-author": "Jonathan Darrer",
