@@ -1,5 +1,7 @@
 # Learnings 8-12 March 2021 <!-- omit in toc -->
 
+![](/images/learnings-1.jpg)
+
 ## Things I've learned from work the week of 8th to 12th March 2021 <!-- omit in toc -->
 
 - [Using SQL Server Docker image on Apple Silicon M1 machines doesn't work, but the Azure SQL Edge image is an alternative](#using-sql-server-docker-image-on-apple-silicon-m1-machines-doesnt-work-but-the-azure-sql-edge-image-is-an-alternative)
@@ -8,7 +10,7 @@
 
 When trying to run the SQL Server **microsoft/mssql-server-linux** Docker image
 on my M1 Mac mini, I get the following error in the logs, with the container
-shuting down immediately afterwards:
+shutting down immediately afterwards:
 
 ```text
 This program has encountered a fatal error and cannot continue running.
