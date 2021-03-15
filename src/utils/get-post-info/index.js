@@ -48,6 +48,7 @@ const getPostInfo = (postId, language, translation) => {
     language: t(`blog-posts:${postId}-language`, { lng }),
     fileName: postId,
     markdown: markdowns[postId],
+    isDraft: t(`blog-posts:${postId}-is-draft`, { lng }) === true,
   };
 };
 
