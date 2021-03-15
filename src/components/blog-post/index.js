@@ -44,6 +44,7 @@ const BlogPost = ({ postInfo }) => {
   return (
     <>
       <ReactMarkdown
+        skipHtml={true} // Ensure html comments in markdown files, like <!-- omit in toc -->, aren't rendered as text - ignores all html (doesn't appear to be a way to be selective and ignore comments only)
         source={postInfo.markdown}
         renderers={{
           heading: ({ children, ...props }) => (

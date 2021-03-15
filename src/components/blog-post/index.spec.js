@@ -1,6 +1,8 @@
 import React from 'react';
 
-const mockMarkdown = '# This is a header\n\nAnd this is a paragraph';
+const mockMarkdown1 = '# This is a header\n\nAnd this is a paragraph';
+const mockMarkdown2 =
+  '# This is a header <!-- omit in toc -->\n\nAnd this is a paragraph';
 const mockMarkdownResult = 'This is a headerAnd this is a paragraph';
 jest.mock('react-markdown', () => () => mockMarkdownResult);
 
@@ -15,7 +17,7 @@ describe('components/BlogPost', () => {
   it('Should show all modes, except the current one', async () => {
     // Arrange
     const postInfo = {
-      markdown: mockMarkdown,
+      markdown: mockMarkdown1,
     };
 
     // Act
@@ -23,5 +25,19 @@ describe('components/BlogPost', () => {
 
     // Assert
     expect(screen.queryByText(mockMarkdownResult)).toBeInTheDocument();
+  });
+
+  it('Should not render html', async () => {
+    // Arrange
+    const postInfo = {
+      markdown: mockMarkdown2,
+    };
+
+    // Act
+    render(<BlogPost postInfo={postInfo} />);
+
+    // Assert
+    expect(screen.queryByText(mockMarkdownResult)).toBeInTheDocument();
+    expect(screen.queryByText('omit in toc')).not.toBeInTheDocument();
   });
 });

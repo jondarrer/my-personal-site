@@ -21,7 +21,7 @@ const HomePage = ({ locales }) => {
   const { currentLanguage: lng } = useLanguage();
   const { t } = useTranslation();
   const { data } = useQuery(GET_POSTS, {
-    variables: { language: lng },
+    variables: { language: lng, maxCount: 5 },
   });
 
   return (

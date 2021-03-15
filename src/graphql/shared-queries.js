@@ -1,8 +1,13 @@
 import { gql } from '@apollo/client';
 
 export const GET_POSTS = gql`
-  query GetPosts($language: Language!, $dateOrder: AscDescOrder) {
-    getPosts(language: $language, dateOrder: $dateOrder) @client {
+  query GetPosts(
+    $language: Language!
+    $dateOrder: AscDescOrder
+    $maxCount: Int
+  ) {
+    getPosts(language: $language, dateOrder: $dateOrder, maxCount: $maxCount)
+      @client {
       id
       title
       description
@@ -18,7 +23,7 @@ export const GET_POSTS = gql`
 `;
 
 export const GET_POST = gql`
-  query GetPosts($language: Language!, $postId: String) {
+  query GetPost($language: Language!, $postId: String) {
     getPost(language: $language, postId: $postId) @client {
       id
       title

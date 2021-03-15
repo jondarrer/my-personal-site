@@ -26,5 +26,9 @@ enum Language {
 }
 
 type Query {
-  getPosts(language: Language!, dateOrder: AscDescOrder): [PostInfo]
+  getPosts(
+    language: Language!
+    dateOrder: AscDescOrder
+    maxCount: Int
+  ): [PostInfo]
 }

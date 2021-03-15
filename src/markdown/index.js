@@ -1,4 +1,9 @@
 import writingCypressTestsInvolvingTheBrowserSPreferColorScheme from './writing-cypress-tests-involving-the-browser-s-prefer-color-scheme.md';
+import learnings812March2021 from './learnings-8-12-march-2021.md';
+import nuVaRepetatiCandVaConectati from './nu-va-repetati-cand-va-conectati.md';
+import donTRepeatYourselfWhenLogging from './dont-repeat-yourself-when-logging.md';
+import n1Petru1112 from './1-petru-1-1-12.md';
+import n1Peter1112 from './1-peter-1-1-12.md';
 import psalm3 from './psalm-3.md';
 import blueberryRaspberryLimeAndCoconutFlourCake from './blueberry-raspberry-lime-and-coconut-flour-cake.md';
 import learningPython from './learning-python.md';
@@ -17,6 +22,11 @@ import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-c
 
 export default {
   'writing-cypress-tests-involving-the-browser-s-prefer-color-scheme': writingCypressTestsInvolvingTheBrowserSPreferColorScheme,
+  'learnings-8-12-march-2021': learnings812March2021,
+  'nu-va-repetati-cand-va-conectati': nuVaRepetatiCandVaConectati,
+  'dont-repeat-yourself-when-logging': donTRepeatYourselfWhenLogging,
+  '1-petru-1-1-12': n1Petru1112,
+  '1-peter-1-1-12': n1Peter1112,
   'psalm-3': psalm3,
   'blueberry-raspberry-lime-and-coconut-flour-cake': blueberryRaspberryLimeAndCoconutFlourCake,
   'learning-python': learningPython,
