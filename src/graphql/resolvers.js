@@ -6,6 +6,7 @@ import {
   getPostInfo,
   getRoutes,
   filterPostsByLanguage,
+  filterPostsByIsDraft,
   orderPostsByDate,
 } from '../utils';
 
@@ -62,7 +63,8 @@ export const resolvers = {
             postInfos[postId] = res;
           });
       }
-      const filtered = filterPostsByLanguage(postInfos, language);
+      let filtered = filterPostsByLanguage(postInfos, language);
+      filtered = filterPostsByIsDraft(filtered, false);
       const ordered = orderPostsByDate(filtered, dateOrder);
       return ordered.slice(0, maxCount);
     },
