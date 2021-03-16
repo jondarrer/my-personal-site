@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learnings-15-19-march-2021": "/blog/learnings-15-19-march-2021",
       "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme": "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme",
       "/blog/learnings-8-12-march-2021": "/blog/learnings-8-12-march-2021",
       "/ro/blog/nu-va-repetati-cand-va-conectati": "/blog/dont-repeat-yourself-when-logging",
@@ -58,6 +59,14 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "learnings-15-19-march-2021-title": "Learnings 15-19 March 2021",
+      "learnings-15-19-march-2021-description": "Things I've learned from work the week of 15th to 19th March 2021",
+      "learnings-15-19-march-2021-author": "Jonathan Darrer",
+      "learnings-15-19-march-2021-date-posted": "2021-03-15",
+      "learnings-15-19-march-2021-tags": "technology,learnings",
+      "learnings-15-19-march-2021-picture": "/images/learnings-1.jpg",
+      "learnings-15-19-march-2021-language": "en",
+      "learnings-15-19-march-2021-is-draft": true,
       "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-title": "Writing Cypress tests involving the browser's prefer-color-scheme",
       "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-description": "Testing a website which incorporates a user's preferred colour scheme with Cypress is fairly straight forward, if you know what to look for. Here's the solution I came up with for my particular scenario",
       "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-author": "Jonathan Darrer",
@@ -248,6 +257,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/learnings-15-19-march-2021": "/blog/learnings-15-19-march-2021",
       "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme": "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme",
       "/blog/learnings-8-12-march-2021": "/blog/learnings-8-12-march-2021",
       "/ro/blog/nu-va-repetati-cand-va-conectati": "/ro/blog/nu-va-repetati-cand-va-conectati",
@@ -281,6 +291,14 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "learnings-15-19-march-2021-title": "Learnings 15-19 March 2021",
+      "learnings-15-19-march-2021-description": "Things I've learned from work the week of 15th to 19th March 2021",
+      "learnings-15-19-march-2021-author": "Jonathan Darrer",
+      "learnings-15-19-march-2021-date-posted": "2021-03-15",
+      "learnings-15-19-march-2021-tags": "technology,learnings",
+      "learnings-15-19-march-2021-picture": "/images/learnings-1.jpg",
+      "learnings-15-19-march-2021-language": "en",
+      "learnings-15-19-march-2021-is-draft": true,
       "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-title": "Writing Cypress tests involving the browser's prefer-color-scheme",
       "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-description": "Testing a website which incorporates a user's preferred colour scheme with Cypress is fairly straight forward, if you know what to look for. Here's the solution I came up with for my particular scenario",
       "writing-cypress-tests-involving-the-browser-s-prefer-color-scheme-author": "Jonathan Darrer",

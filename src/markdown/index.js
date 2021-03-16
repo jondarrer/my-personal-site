@@ -1,3 +1,4 @@
+import learnings1519March2021 from './learnings-15-19-march-2021.md';
 import writingCypressTestsInvolvingTheBrowserSPreferColorScheme from './writing-cypress-tests-involving-the-browser-s-prefer-color-scheme.md';
 import learnings812March2021 from './learnings-8-12-march-2021.md';
 import nuVaRepetatiCandVaConectati from './nu-va-repetati-cand-va-conectati.md';
@@ -21,6 +22,7 @@ import coconutFlourChocolateMuffins from './coconut-flour-chocolate-muffins.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
 
 export default {
+  'learnings-15-19-march-2021': learnings1519March2021,
   'writing-cypress-tests-involving-the-browser-s-prefer-color-scheme': writingCypressTestsInvolvingTheBrowserSPreferColorScheme,
   'learnings-8-12-march-2021': learnings812March2021,
   'nu-va-repetati-cand-va-conectati': nuVaRepetatiCandVaConectati,
