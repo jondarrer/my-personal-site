@@ -15,7 +15,7 @@ describe('components/Paginator', () => {
     // Assert
     expect(screen.getAllByRole('tab')).toHaveLength(8);
   });
-  it('should not call for the same page when clicked', () => {
+  it('should not call the click handler for the same page when clicked', () => {
     // Arrange
     const mockOnClickHandler = jest.fn();
 

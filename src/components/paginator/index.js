@@ -32,6 +32,7 @@ const Paginator = ({
       case currentPage:
         child = (
           <Box
+            key={p}
             aria-label={`Page Button ${p}`}
             as="span"
             role="tab"
@@ -44,6 +45,7 @@ const Paginator = ({
       default:
         child = (
           <NavLink
+            key={p}
             aria-label={`Page Button ${p}`}
             onClick={p === currentPage ? noOp : () => onPageClick({ page: p })}
             role="tab"
