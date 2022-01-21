@@ -1,3 +1,4 @@
+import jude from './jude.md';
 import stickyBbqRibsRecipe from './sticky-bbq-ribs-recipe.md';
 import learnings1519March2021 from './learnings-15-19-march-2021.md';
 import writingCypressTestsInvolvingTheBrowserSPreferColorScheme from './writing-cypress-tests-involving-the-browser-s-prefer-color-scheme.md';
@@ -23,6 +24,7 @@ import coconutFlourChocolateMuffins from './coconut-flour-chocolate-muffins.md';
 import muffinDeCiocolataCuFainaDeCocos from './muffin-de-ciocolata-cu-faina-de-cocos.md';
 
 export default {
+  'jude': jude,
   'sticky-bbq-ribs-recipe': stickyBbqRibsRecipe,
   'learnings-15-19-march-2021': learnings1519March2021,
   'writing-cypress-tests-involving-the-browser-s-prefer-color-scheme': writingCypressTestsInvolvingTheBrowserSPreferColorScheme,

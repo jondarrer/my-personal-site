@@ -25,6 +25,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/jude": "/blog/jude",
       "/blog/sticky-bbq-ribs-recipe": "/blog/sticky-bbq-ribs-recipe",
       "/blog/learnings-15-19-march-2021": "/blog/learnings-15-19-march-2021",
       "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme": "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme",
@@ -60,6 +61,14 @@
       "dark": "Dark Mode"
     },
     "blog-posts": {
+      "jude-title": "Jude",
+      "jude-description": "Thoughts on Jude",
+      "jude-author": "Jonathan Darrer",
+      "jude-date-posted": "2022-01-21",
+      "jude-tags": "bible,theology",
+      "jude-picture": "/images/jude.jpg",
+      "jude-language": "en",
+      "jude-is-draft": true,
       "sticky-bbq-ribs-recipe-title": "Sticky BBQ ribs recipe",
       "sticky-bbq-ribs-recipe-description": "My favourite sticky BBQ ribs recipe from Gordon Ramsay",
       "sticky-bbq-ribs-recipe-author": "Jonathan Darrer",
@@ -265,6 +274,7 @@
       "email": "jonny@jondarrer.me.uk"
     },
     "routes": {
+      "/blog/jude": "/blog/jude",
       "/blog/sticky-bbq-ribs-recipe": "/blog/sticky-bbq-ribs-recipe",
       "/blog/learnings-15-19-march-2021": "/blog/learnings-15-19-march-2021",
       "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme": "/blog/writing-cypress-tests-involving-the-browser-s-prefer-color-scheme",
@@ -300,6 +310,14 @@
       "dark": "Mod Întunecat"
     },
     "blog-posts": {
+      "jude-title": "Jude",
+      "jude-description": "Thoughts on Jude",
+      "jude-author": "Jonathan Darrer",
+      "jude-date-posted": "2022-01-21",
+      "jude-tags": "bible,theology",
+      "jude-picture": "/images/jude.jpg",
+      "jude-language": "en",
+      "jude-is-draft": true,
       "sticky-bbq-ribs-recipe-title": "Sticky BBQ ribs recipe",
       "sticky-bbq-ribs-recipe-description": "My favourite sticky BBQ ribs recipe from Gordon Ramsay",
       "sticky-bbq-ribs-recipe-author": "Jonathan Darrer",
