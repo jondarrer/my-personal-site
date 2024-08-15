@@ -16,8 +16,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm ci
-      - run: npm test
+      - run: yarn ci
+      - run: yarn test
+      - run: NODE_OPTIONS=--openssl-legacy-provider yarn build
 
   main:
     needs: build
