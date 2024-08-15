@@ -7,7 +7,6 @@ import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { resolve } from 'path';
 
-import App from './src/app';
 import { client } from './src/graphql/client';
 import { getRoutes } from './src/utils';
 
@@ -67,8 +66,8 @@ export default {
     new FaviconsWebpackPlugin(),
     new ReactStaticSiteHydrater({
       routes,
-      component: App,
-      plugins: ['react-router', 'helmet', ['apollo', { client }]],
+      componentPath: resolve(__dirname, './src/app.js'),
+      plugins: ['react-router', 'helmet', ['apollo', { client }], 'firebase'],
     }),
     new CopyPlugin({
       patterns: [
