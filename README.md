@@ -1,7 +1,7 @@
 # jondarrer.com
 
 The website for [jondarrer.com](https://jondarrer.com). Deployed using
-[Travis CI](https://travis-ci.com) and hosted by
+a [Github Action for deployment](./.github/workflows/firebase.yml) and hosted by
 [Firebase](https://firebase.google.com).
 
 ## Development
