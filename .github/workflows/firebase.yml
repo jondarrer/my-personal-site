@@ -26,7 +26,6 @@ jobs:
     name: Deploy to Firebase
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - uses: lowply/deploy-firebase@v0.0.5
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
