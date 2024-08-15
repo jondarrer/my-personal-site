@@ -19,6 +19,6 @@ export default LanguageContext;
 /**
  * Hook with the current language and available languages.
  *
- * @returns {LanguageContextValue}
+ * @returns {LanguageContextValue} The language
  */
 export const useLanguage = () => React.useContext(LanguageContext);

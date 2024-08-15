@@ -24,7 +24,7 @@ const lastmod = `${pad(today.getFullYear(), 2)}-${pad(
   today.getMonth() + 1,
   2
 )}-${pad(today.getDate(), 2)}`;
-const priority = '0.8';
+const priority = 0.8;
 const changefreq = 'daily';
 const paths = [];
 const routes = getRoutes();
@@ -63,12 +63,12 @@ export default {
       filename: 'default.html',
       scriptLoading: 'defer',
     }),
-    new SitemapPlugin('https://jondarrer.com', paths),
+    new SitemapPlugin({ base: 'https://jondarrer.com', paths }),
     new FaviconsWebpackPlugin(),
     new ReactStaticSiteHydrater({
       routes,
       component: App,
-      plugins: ['react-router', 'helmet', ['apollo', { client }], 'firebase'],
+      plugins: ['react-router', 'helmet', ['apollo', { client }]],
     }),
     new CopyPlugin({
       patterns: [
