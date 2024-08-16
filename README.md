@@ -16,38 +16,38 @@ cd my-personal-site
 ### Install
 
 ```bash
-npm i
+yarn
 ```
 
 ### Run locally
 
 ```bash
-npm start
+NODE_OPTIONS=--openssl-legacy-provider yarn start
 ```
 
 You can also try out how it will work when deployed to Firebase with:
 
 ```bash
-npm run start:fb
+NODE_OPTIONS=--openssl-legacy-provider yarn start:fb
 ```
 
 Which will run the following commands:
 
 ```bash
-npm run build
+NODE_OPTIONS=--openssl-legacy-provider yarn build
 firebase serve --only hosting
 ```
 
 ### Test
 
 ```bash
-npm test
+NODE_OPTIONS=--openssl-legacy-provider yarn test
 ```
 
 ### Build
 
 ```bash
-npm run build
+NODE_OPTIONS=--openssl-legacy-provider yarn build
 ```
 
 ### Deploy
