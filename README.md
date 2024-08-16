@@ -52,6 +52,8 @@ NODE_OPTIONS=--openssl-legacy-provider yarn build
 
 ### Deploy
 
+NB. You must have the website running locally on port 9000 before pushing, so the Cypress integration tests can run properly.
+
 ```bash
 git push
 ```
