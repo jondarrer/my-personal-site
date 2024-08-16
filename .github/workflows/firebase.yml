@@ -6,26 +6,31 @@ on:
       - master
 
 jobs:
-  build:
-    name: Build
+  test:
+    name: Test
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn test
-      - run: yarn add sharp --ignore-engines
-      - run: NODE_OPTIONS=--openssl-legacy-provider yarn build
 
   main:
-    needs: build
-    name: Deploy to Firebase
+    needs: test
+    name: Build and deploy to Firebase
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn add sharp --ignore-engines
+      - run: NODE_OPTIONS=--openssl-legacy-provider yarn build
       - uses: lowply/deploy-firebase@v0.0.5
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
