@@ -12,6 +12,9 @@ firebase-debug.log*
 # Firebase config (now auto-generated via static-site plugin)
 firebase.json
 
+# Google Applicaiton Credentials for publishing to Firebase
+application_default_credentials.json
+
 # Uncomment this if you'd like others to create their own Firebase project.
 # For a team working on the same Firebase project(s), it is recommended to leave
 # it commented so all members can deploy to the same project(s) in .firebaserc.
