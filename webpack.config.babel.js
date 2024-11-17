@@ -73,6 +73,7 @@ export default {
       patterns: [
         { from: 'src/images', to: 'images' },
         { from: 'src/fonts', to: 'fonts' },
+        { from: 'src/audio', to: 'audio' },
       ],
     }),
   ],
